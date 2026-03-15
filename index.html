@@ -3,43 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="format-detection" content="telephone=no, date=no, address=no">
 <title>Festiflow — Registre</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --accent:#d4522a;--green:#3ba55d;--amber:#f5a623;--red:#ed4245;--blue:#5865f2;--purple:#9b59b6;
-  --frame:#2c2f47;--frame-card:#3a3d5e;--frame-input:#30324d;
-  --bg-top:#1e203f;--bg-bot:#15182e;--card:#1e203f;--card-hover:#272a48;
-  --c1:#fff;--c2:rgba(255,255,255,.72);--c3:rgba(255,255,255,.40);--c4:rgba(255,255,255,.12);
-  --fs-xs:9px;--fs-sm:11px;--fs-md:13px;--fs-lg:15px;--fs-xl:18px;--fs-2xl:24px;
-  --ct-xs:12px;--ct-sm:14px;--ct-md:15px;--ct-lg:17px;--ct-xl:22px;--ct-2xl:30px;--ct-mono:13px;
-  --fw-r:400;--fw-m:500;--fw-s:600;--fw-b:800;
-  --stc:#3ba55d;--stcb:rgba(59,165,93,.14);--stp:#f5a623;--stpb:rgba(245,166,35,.14);--stn:#5865f2;--stnb:rgba(88,101,242,.14);--stv:#ed4245;--stvb:rgba(237,66,69,.14);
-  --right-w:420px;
+--accent:#d4522a;--green:#3ba55d;--amber:#f5a623;--red:#ed4245;--blue:#5865f2;--purple:#9b59b6;
+--frame:#2c2f47;--frame-card:#3a3d5e;--frame-input:#30324d;
+--bg-top:#1e203f;--bg-bot:#15182e;--card:#1e203f;--card-hover:#272a48;
+--c1:#fff;--c2:rgba(255,255,255,.72);--c3:rgba(255,255,255,.40);--c4:rgba(255,255,255,.12);
+--fs-xs:9px;--fs-sm:11px;--fs-md:13px;--fs-lg:15px;--fs-xl:18px;--fs-2xl:24px;
+--ct-xs:12px;--ct-sm:14px;--ct-md:15px;--ct-lg:17px;--ct-xl:22px;--ct-2xl:30px;--ct-mono:13px;
+--fw-r:400;--fw-m:500;--fw-s:600;--fw-b:800;
+--right-w:420px;
 }
 html,body{height:100%;overflow:hidden;background:linear-gradient(180deg,#7758cf,#8c6bd8 50%,#be98e9);font-family:'Outfit',sans-serif;-webkit-font-smoothing:antialiased;color:var(--c2)}
 .app{display:flex;width:100vw;height:100vh;height:100dvh}
+
+/* ══ LEFT ZONE ══ */
 .left-zone{display:flex;flex-direction:column;flex-shrink:0;width:284px}
 .left-top{display:flex;flex:1;overflow:hidden}
 .left-bottom{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#1a1c38;border-top:1px solid rgba(255,255,255,.15)}
-.lb-name{flex:1;min-width:0}.lb-user{font-size:var(--fs-md);font-weight:var(--fw-s);color:var(--c1)}
-.lb-icons{display:flex;gap:2px;align-items:center}
-.lb-b{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .14s}
-.lb-b:hover{background:rgba(255,255,255,.08)}
-.lb-b svg{width:16px;height:16px;fill:none;stroke:var(--c3);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:stroke .14s}
-.lb-b:hover svg{stroke:var(--c1)}
+.lb-name{flex:1}.lb-user{font-size:var(--fs-md);font-weight:var(--fw-s);color:var(--c1)}
 .lb-wrap{position:relative;width:42px;height:42px;flex-shrink:0}
 .lb-img{width:33px;height:33px;object-fit:cover;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2}
-.lb-hex{position:absolute;inset:0;z-index:1;filter:drop-shadow(0 0 6px rgba(155,89,182,.15))}.lb-hex svg{width:100%;height:100%}
-.rail{width:64px;flex-shrink:0;background:transparent;display:flex;flex-direction:column;align-items:center;gap:6px;z-index:10}
+.lb-hex{position:absolute;inset:0;z-index:1}.lb-hex svg{width:100%;height:100%}
+
+/* RAIL */
+.rail{width:64px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:6px;z-index:10}
 .rail-top{height:56px;display:flex;align-items:center;justify-content:center;flex-shrink:0;width:100%;border-bottom:1px solid rgba(255,255,255,.08)}
 .rail-logo{width:40px;height:40px;border-radius:50%;overflow:hidden;cursor:pointer;flex-shrink:0;box-shadow:0 0 0 2px rgba(212,82,42,.45),0 2px 10px rgba(212,82,42,.25);transition:border-radius .2s}
-.rail-logo:hover{border-radius:12px}.rail-logo img{width:100%;height:100%;object-fit:cover;display:block}
+.rail-logo:hover{border-radius:12px}.rail-logo img{width:100%;height:100%;object-fit:cover}
 .rail-icons{display:flex;flex-direction:column;align-items:center;gap:6px;margin:auto 0;padding:6px 0}
 .rail-ev-wrap{position:relative;display:flex;align-items:center;justify-content:center;flex-shrink:0;cursor:pointer;padding:4px 0}
-.rail-event{width:42px;height:42px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.08);transition:background .2s;overflow:hidden}
+.rail-event{width:42px;height:42px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.08);transition:background .2s}
 .rail-event span{font-size:var(--fs-sm);font-weight:var(--fw-b);color:var(--c2);letter-spacing:-.5px;transition:color .2s}
 .rail-ev-wrap:hover .rail-event{background:rgba(255,255,255,.15)}
 .rail-ev-wrap.on .rail-event{background:rgba(255,255,255,.14)}.rail-ev-wrap.on .rail-event span{color:#fff}
@@ -47,12 +44,11 @@ html,body{height:100%;overflow:hidden;background:linear-gradient(180deg,#7758cf,
 .rail-ev-wrap:hover::before{height:8px;opacity:.5}.rail-ev-wrap.on::before{height:20px;opacity:1}
 .rail-ev-wrap.archived .rail-event{opacity:.4}.rail-ev-wrap.archived.on .rail-event{opacity:.7}
 .rail-sep{width:28px;height:1px;background:rgba(255,255,255,.1);margin:4px 0}
-.rail-add{width:42px;height:42px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;cursor:pointer;background:rgba(255,255,255,.05);color:var(--green);font-size:var(--fs-2xl);font-weight:var(--fw-r);transition:border-radius .2s,background .2s}
+.rail-add{width:42px;height:42px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;cursor:pointer;background:rgba(255,255,255,.05);color:var(--green);font-size:var(--fs-2xl);transition:border-radius .2s,background .2s}
 .rail-add:hover{border-radius:12px;background:var(--green);color:#fff}
-.rail-tous{width:42px;height:42px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;cursor:pointer;background:rgba(255,255,255,.05);font-size:var(--fs-xs);font-weight:var(--fw-b);color:var(--c3);letter-spacing:-.3px;transition:background .2s,color .2s}
-.rail-tous:hover{background:rgba(255,255,255,.12);color:var(--c1)}
-.rail-tous.on{background:rgba(212,82,42,.15);color:var(--accent)}
-.nav{width:220px;flex-shrink:0;display:flex;flex-direction:column;background:linear-gradient(180deg,rgba(80,75,120,.5),rgba(45,42,80,.6));backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-right:1px solid rgba(255,255,255,.06);box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 8px 32px rgba(0,0,0,.25)}
+
+/* NAV */
+.nav{width:220px;flex-shrink:0;display:flex;flex-direction:column;background:linear-gradient(180deg,rgba(80,75,120,.5),rgba(45,42,80,.6));backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-right:1px solid rgba(255,255,255,.06)}
 .nav-head{height:56px;display:flex;flex-direction:column;justify-content:center;padding:0 18px;border-bottom:1px solid rgba(255,255,255,.06);flex-shrink:0}
 .nav-title{font-size:var(--fs-xl);font-weight:var(--fw-b);color:var(--c1);letter-spacing:-.3px}
 .nav-sub{font-family:'JetBrains Mono',monospace;font-size:var(--fs-xs);color:var(--c3)}
@@ -61,439 +57,787 @@ html,body{height:100%;overflow:hidden;background:linear-gradient(180deg,#7758cf,
 .nav-label{font-size:var(--fs-xs);font-weight:var(--fw-s);color:var(--c3);text-transform:uppercase;letter-spacing:.1em;padding:10px 12px 4px}
 .ni{display:flex;align-items:center;gap:12px;padding:9px 12px;border-radius:8px;margin-bottom:1px;cursor:pointer;text-decoration:none;color:inherit;transition:background .14s}
 .ni:hover{background:rgba(0,0,0,.15)}.ni.on{background:rgba(15,16,35,.55)}
-.ni svg{width:18px;height:18px;flex-shrink:0;fill:none;stroke:var(--c3);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:stroke .14s}
+.ni svg{width:18px;height:18px;flex-shrink:0;fill:none;stroke:var(--c3);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .ni:hover svg{stroke:var(--c2)}.ni.on svg{stroke:var(--accent)}
-.ni span{font-size:var(--fs-md);font-weight:var(--fw-m);color:var(--c2);transition:color .14s}
-.ni:hover span{color:var(--c1)}.ni.on span{color:var(--c1);font-weight:var(--fw-s)}
+.ni span{font-size:var(--fs-md);font-weight:var(--fw-m);color:var(--c2)}.ni:hover span{color:var(--c1)}.ni.on span{color:var(--c1);font-weight:var(--fw-s)}
 .ni em{margin-left:auto;font-style:normal;font-family:'JetBrains Mono',monospace;font-size:var(--fs-xs);font-weight:var(--fw-s);padding:2px 7px;border-radius:10px}
 .em-live{background:rgba(59,165,93,.18);color:var(--green)}.em-design{background:rgba(245,166,35,.18);color:var(--amber)}.em-soon{background:rgba(255,255,255,.06);color:var(--c3)}.em-api{background:rgba(88,101,242,.18);color:var(--blue)}
+
+/* ══ MAIN ══ */
 .main{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0;background:linear-gradient(180deg,var(--bg-top),var(--bg-bot))}
 .topbar{height:56px;flex-shrink:0;display:flex;align-items:center;padding:0 24px;background:var(--frame);border-bottom:1px solid rgba(255,255,255,.06);gap:12px}
-.topbar-left{display:flex;align-items:center;gap:10px;flex:1;min-width:0}
-.page-title{font-size:var(--fs-xl);font-weight:var(--fw-b);color:var(--c1);letter-spacing:-.3px;white-space:nowrap}
+.topbar-left{display:flex;align-items:center;gap:10px;flex:1}
+.page-title{font-size:var(--fs-xl);font-weight:var(--fw-b);color:var(--c1);letter-spacing:-.3px}
 .page-count{font-family:'JetBrains Mono',monospace;font-size:var(--fs-sm);color:var(--c3);background:rgba(255,255,255,.06);padding:2px 8px;border-radius:6px}
 .ev-ctx{font-family:'JetBrains Mono',monospace;font-size:var(--fs-xs);font-weight:var(--fw-s);padding:3px 8px;border-radius:6px;background:rgba(212,82,42,.15);color:var(--accent)}
-.ev-ctx.archived{background:rgba(255,255,255,.06);color:var(--c3)}
 .topbar-right{display:flex;align-items:center;gap:8px}
-.btn-primary{background:var(--accent);color:#fff;border:none;padding:8px 16px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:var(--fs-md);font-weight:var(--fw-s);cursor:pointer;transition:opacity .15s;white-space:nowrap;display:flex;align-items:center;gap:6px}
+.btn-primary{background:var(--accent);color:#fff;border:none;padding:8px 16px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:var(--fs-md);font-weight:var(--fw-s);cursor:pointer;transition:opacity .15s;display:flex;align-items:center;gap:6px;white-space:nowrap}
 .btn-primary:hover{opacity:.88}.btn-primary svg{width:14px;height:14px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round}
-.btn-secondary{background:transparent;color:var(--c2);border:1px solid var(--c4);padding:8px 16px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:var(--fs-md);font-weight:var(--fw-s);cursor:pointer;transition:all .15s;white-space:nowrap;display:flex;align-items:center;gap:6px}
+.btn-secondary{background:transparent;color:var(--c2);border:1px solid var(--c4);padding:8px 16px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:var(--fs-md);font-weight:var(--fw-s);cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:6px;white-space:nowrap}
 .btn-secondary:hover{border-color:var(--c3);color:var(--c1)}.btn-secondary svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
-.tb-toggle{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .14s}
-.tb-toggle:hover{background:rgba(255,255,255,.06)}.tb-toggle svg{width:16px;height:16px;fill:none;stroke:var(--c3);stroke-width:1.6;stroke-linecap:round;transition:stroke .14s}.tb-toggle:hover svg{stroke:var(--c1)}
 .content{flex:1;display:flex;flex-direction:column;overflow:hidden}
-.stats-bar{display:flex;gap:12px;padding:18px 24px 0;flex-shrink:0;flex-wrap:wrap}
-.stat-card{display:flex;align-items:center;gap:10px;background:var(--frame-card);border-radius:10px;padding:12px 16px;flex:1;min-width:130px}
-.stat-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.stat-icon svg{width:16px;height:16px;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.stat-value{font-family:'JetBrains Mono',monospace;font-size:var(--ct-xl);font-weight:var(--fw-s);color:var(--c1);line-height:1}
-.stat-label{font-size:var(--ct-xs);color:var(--c3);margin-top:2px}
-.toolbar{display:flex;gap:8px;padding:16px 24px 0;flex-shrink:0;align-items:center;flex-wrap:wrap}
-.search-wrap{position:relative;flex:1;max-width:320px;min-width:160px}
-.search-wrap input{width:100%;padding:9px 14px 9px 34px;border:1px solid var(--c4);border-radius:8px;background:var(--frame-input);font-family:'Outfit',sans-serif;font-size:var(--ct-sm);color:var(--c1);outline:none;transition:border-color .15s}
-.search-wrap input:focus{border-color:var(--accent)}.search-wrap input::placeholder{color:var(--c3)}
-.search-icon{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:13px;height:13px;fill:none;stroke:var(--c3);stroke-width:2;stroke-linecap:round}
-select.filter{padding:9px 28px 9px 10px;border:1px solid var(--c4);border-radius:8px;background:var(--frame-input);font-family:'Outfit',sans-serif;font-size:var(--ct-xs);color:var(--c2);outline:none;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='rgba(255,255,255,.4)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;transition:border-color .15s}
-select.filter:focus{border-color:var(--accent)}select.filter option{background:var(--frame);color:var(--c2)}
-.filter-count{font-family:'JetBrains Mono',monospace;font-size:var(--ct-xs);color:var(--c3);margin-left:auto;white-space:nowrap}
-.view-toggle{display:flex;border:1px solid var(--c4);border-radius:8px;overflow:hidden}
-.vt-btn{padding:7px 12px;font-family:'Outfit',sans-serif;font-size:var(--ct-xs);font-weight:var(--fw-s);color:var(--c3);cursor:pointer;transition:all .14s;background:transparent;border:none;white-space:nowrap}
-.vt-btn:hover{color:var(--c1);background:rgba(255,255,255,.04)}
-.vt-btn.on{background:rgba(212,82,42,.12);color:var(--accent)}
-.table-wrap{flex:1;overflow:auto;padding:12px 24px 24px}
-.table-wrap::-webkit-scrollbar{width:4px;height:4px}.table-wrap::-webkit-scrollbar-thumb{background:rgba(255,255,255,.06);border-radius:4px}
-table{width:100%;border-collapse:collapse;border-radius:12px;overflow:hidden;border:1px solid var(--c4);min-width:900px}
-thead tr{background:rgba(255,255,255,.03);border-bottom:1px solid var(--c4)}
-th{padding:10px 12px;text-align:left;font-size:var(--ct-xs);font-family:'JetBrains Mono',monospace;font-weight:var(--fw-m);color:var(--c3);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;cursor:pointer;user-select:none;transition:color .14s}
-th:hover{color:var(--c1)}
-th.phase-hd{text-align:center;border-left:1px solid var(--c4);font-weight:var(--fw-s);letter-spacing:.04em;padding:6px 4px;font-size:10px}
-th.phase-hd.montage{color:#5865f2}
-th.phase-hd.exploit{color:var(--accent)}
-th.phase-hd.demontage{color:var(--purple)}
-th.day-hd{text-align:center;font-size:9px;padding:4px 2px;color:var(--c3);font-weight:var(--fw-r);letter-spacing:0;min-width:28px}
-tbody tr{border-bottom:1px solid var(--c4);cursor:pointer;transition:background .12s}
-tbody tr:last-child{border-bottom:none}
-tbody tr:hover{background:rgba(255,255,255,.04)}
-tbody tr.sel{background:rgba(212,82,42,.1)}
-td{padding:10px 12px;font-size:var(--ct-sm);vertical-align:middle}
-.td-name{display:flex;align-items:center;gap:10px}
-.haw{position:relative;width:34px;height:34px;flex-shrink:0}
-.hav{width:26px;height:26px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:var(--fw-b);color:#fff;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2}
-.har{position:absolute;inset:0;z-index:1}.har svg{width:100%;height:100%}
-.nb .fn{font-size:var(--ct-sm);font-weight:var(--fw-s);color:var(--c1);white-space:nowrap}
-.nb .em{font-size:10px;color:var(--c3);font-family:'JetBrains Mono',monospace;display:block}
-.tbg{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:var(--fw-s);white-space:nowrap}
-.asb{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:12px;font-size:11px;font-weight:var(--fw-s);white-space:nowrap}
-.asb::before{content:'';width:5px;height:5px;border-radius:50%}
-.as-confirmed{background:var(--stcb);color:var(--stc)}.as-confirmed::before{background:var(--stc)}
-.as-invited{background:var(--stpb);color:var(--stp)}.as-invited::before{background:var(--stp)}
-.as-cancelled{background:var(--stvb);color:var(--stv)}.as-cancelled::before{background:var(--stv)}
-.as-completed{background:rgba(155,89,182,.14);color:var(--purple)}.as-completed::before{background:var(--purple)}
-td.day-cell{text-align:center;padding:6px 2px;min-width:28px}
-.dot{width:14px;height:14px;border-radius:50%;display:inline-block;cursor:pointer;transition:all .12s;border:1.5px solid transparent}
-.dot.empty{background:rgba(255,255,255,.04);border-color:var(--c4)}
-.dot.present{background:var(--green);border-color:var(--green);box-shadow:0 0 4px rgba(59,165,93,.3)}
-.dot:hover{transform:scale(1.2)}
-td.day-cell:first-of-type{border-left:1px solid var(--c4)}
-.mini-ok{color:var(--green);font-size:var(--ct-xs);font-family:'JetBrains Mono',monospace}
-.mini-warn{color:var(--amber);font-size:var(--ct-xs);font-family:'JetBrains Mono',monospace}
-.log-bar{width:40px;height:4px;background:var(--c4);border-radius:2px;overflow:hidden;display:inline-block;vertical-align:middle;margin-left:4px}
-.log-fill{height:100%;border-radius:2px;transition:width .3s}
-@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
-tbody tr{animation:fadeIn .2s ease both}
-.right{width:var(--right-w);flex-shrink:0;background:var(--frame);border-left:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;overflow:hidden;transition:width .3s,opacity .3s,transform .3s}
-.right.shut{width:0;overflow:hidden;opacity:0;border-left:none}
+
+/* LINEUP TABS BAR */
+.lineup-bar{display:flex;align-items:center;gap:8px;padding:14px 24px 0;flex-wrap:wrap}
+.lu-tab{padding:6px 14px;border-radius:8px;font-size:var(--ct-xs);font-weight:var(--fw-s);cursor:pointer;border:1px solid var(--c4);background:transparent;color:var(--c3);transition:all .14s;font-family:'Outfit',sans-serif}
+.lu-tab:hover{border-color:var(--c3);color:var(--c1)}
+.lu-tab.on{border-color:var(--accent);color:var(--accent);background:rgba(212,82,42,.08)}
+.lu-tab.draft{border-style:dashed}
+.lu-imp{font-size:var(--ct-xs);color:var(--c3);display:flex;align-items:center;gap:6px;margin-left:8px}
+.lu-imp-btn{padding:3px 8px;border-radius:6px;border:1px solid var(--c4);color:var(--blue);cursor:pointer;font-size:var(--fs-sm);font-family:'Outfit',sans-serif;background:transparent;transition:all .14s}
+.lu-imp-btn:hover{border-color:var(--blue);background:rgba(88,101,242,.08)}
+.lu-submit{margin-left:auto;padding:6px 14px;border-radius:8px;font-size:var(--ct-xs);font-weight:var(--fw-s);background:rgba(59,165,93,.12);color:var(--green);border:1px solid rgba(59,165,93,.3);cursor:pointer;font-family:'Outfit',sans-serif;transition:all .14s}
+.lu-submit:hover{background:rgba(59,165,93,.2)}
+
+/* METRICS */
+.metrics{display:flex;gap:12px;padding:12px 24px 0;flex-wrap:wrap}
+.metric{display:flex;align-items:center;gap:10px;background:var(--frame-card);border-radius:10px;padding:12px 16px;flex:1;min-width:130px}
+.metric-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.metric-icon svg{width:16px;height:16px;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.metric-val{font-family:'JetBrains Mono',monospace;font-size:var(--ct-xl);font-weight:var(--fw-s);color:var(--c1);line-height:1}
+.metric-label{font-size:var(--ct-xs);color:var(--c3);margin-top:2px}
+
+/* ROSTER */
+.roster-wrap{flex:1;overflow-y:auto;padding:14px 24px 24px}
+.roster-wrap::-webkit-scrollbar{width:4px}.roster-wrap::-webkit-scrollbar-thumb{background:rgba(255,255,255,.06);border-radius:4px}
+.section-label{font-size:var(--fs-xs);font-weight:var(--fw-s);color:var(--c3);text-transform:uppercase;letter-spacing:.1em;padding:12px 0 6px;display:flex;align-items:center;gap:8px}
+.section-label::after{content:'';flex:1;height:1px;background:var(--c4)}
+
+/* LEADER CARD */
+.leader-card{display:flex;align-items:center;gap:12px;padding:14px;background:var(--frame-card);border-radius:12px;margin-bottom:8px;border-left:3px solid var(--amber);cursor:pointer;transition:background .12s}
+.leader-card:hover{background:rgba(58,61,94,.8)}
+.leader-card.sel{background:rgba(212,82,42,.1);border-left-color:var(--accent)}
+
+/* STAFF SLOT */
+.slot{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--frame-card);border-radius:10px;margin-bottom:4px;cursor:pointer;transition:all .12s;border:1px solid transparent}
+.slot:hover{background:rgba(58,61,94,.8);border-color:rgba(255,255,255,.06)}
+.slot.sel{background:rgba(212,82,42,.08);border-color:rgba(212,82,42,.2)}
+.slot.needs{border-left:3px solid var(--amber);border-radius:0 10px 10px 0}
+
+/* AVATARS */
+.av{flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:var(--fw-b);color:#fff;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%)}
+.av-lg{width:42px;height:42px;font-size:var(--ct-sm)}
+.av-md{width:34px;height:34px;font-size:var(--ct-xs)}
+.av-sm{width:26px;height:26px;font-size:10px}
+
+/* NAME + META */
+.person-info{flex:1;min-width:0}
+.person-name{font-size:var(--ct-md);font-weight:var(--fw-s);color:var(--c1);display:flex;align-items:center;gap:6px}
+.leader-star{color:var(--amber);font-size:14px}
+.person-role{font-size:var(--ct-xs);color:var(--c3);margin-top:1px}
+.person-tags{display:flex;gap:4px;margin-top:4px;flex-wrap:wrap}
+
+/* TAGS */
+.tag{display:inline-block;padding:2px 7px;border-radius:4px;font-size:var(--fs-sm);font-weight:var(--fw-s);white-space:nowrap}
+.t-confirmed{background:rgba(59,165,93,.14);color:var(--green)}
+.t-invited{background:rgba(245,166,35,.14);color:var(--amber)}
+.t-cancelled{background:rgba(237,66,69,.14);color:var(--red)}
+.t-local{background:rgba(88,101,242,.12);color:var(--blue)}
+.t-vehicle{background:rgba(155,89,182,.12);color:var(--purple)}
+.t-cost{background:rgba(255,255,255,.06);color:var(--c3)}
+.t-team{padding:2px 7px;border-radius:4px;font-size:var(--fs-sm);font-weight:var(--fw-s)}
+
+/* STARS */
+.stars{font-size:var(--ct-xs);letter-spacing:1px;margin-left:4px}
+.s-on{color:var(--amber)}.s-off{color:var(--c4)}
+
+/* QUICK ACTIONS */
+.q-actions{display:flex;gap:3px;align-items:center;flex-shrink:0}
+.q-btn{width:30px;height:30px;border-radius:8px;border:1px solid var(--c4);display:flex;align-items:center;justify-content:center;cursor:pointer;background:transparent;transition:all .12s}
+.q-btn:hover{background:rgba(255,255,255,.06);border-color:var(--c3)}
+.q-btn svg{width:14px;height:14px;fill:none;stroke:var(--c3);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.q-btn:hover svg{stroke:var(--c1)}
+.q-btn.wa:hover{border-color:var(--green)}.q-btn.wa:hover svg{stroke:var(--green)}
+
+/* ML PILL */
+.ml-pill{font-size:var(--fs-xs);padding:3px 8px;border-radius:10px;white-space:nowrap;font-weight:var(--fw-s)}
+.ml-done{background:rgba(59,165,93,.14);color:var(--green)}
+.ml-wait{background:rgba(245,166,35,.14);color:var(--amber)}
+.ml-send{background:rgba(88,101,242,.12);color:var(--blue);cursor:pointer}
+
+/* VACANT SLOT */
+.vacant{display:flex;align-items:center;gap:10px;padding:14px;border:1.5px dashed var(--c4);border-radius:10px;cursor:pointer;transition:all .12s;margin-top:4px}
+.vacant:hover{border-color:var(--c3);background:rgba(255,255,255,.02)}
+.vacant svg{width:20px;height:20px;fill:none;stroke:var(--c3);stroke-width:1.5;stroke-linecap:round;flex-shrink:0}
+.vacant-info{flex:1;font-size:var(--ct-sm);color:var(--c3)}
+.vacant-info strong{color:var(--c2);font-weight:var(--fw-s)}
+.vacant-btn{padding:5px 12px;border-radius:8px;border:1px solid var(--blue);color:var(--blue);font-size:var(--ct-xs);font-weight:var(--fw-s);cursor:pointer;background:transparent;font-family:'Outfit',sans-serif;transition:all .14s;flex-shrink:0}
+.vacant-btn:hover{background:rgba(88,101,242,.1)}
+
+/* SUGGESTION */
+.suggest{margin-top:6px;padding:10px 14px;background:rgba(88,101,242,.06);border:1px solid rgba(88,101,242,.15);border-radius:10px;display:flex;align-items:center;gap:10px}
+.suggest-text{flex:1;font-size:var(--ct-xs);color:var(--c2);line-height:1.4}
+.suggest-text strong{color:var(--c1);font-weight:var(--fw-s)}
+.suggest-why{font-size:var(--fs-sm);color:var(--c3);margin-top:2px}
+.suggest-add{padding:4px 10px;border-radius:6px;border:1px solid var(--blue);color:var(--blue);font-size:var(--fs-sm);font-weight:var(--fw-s);cursor:pointer;background:transparent;font-family:'Outfit',sans-serif;white-space:nowrap;flex-shrink:0}
+
+/* NO EVENT */
+.no-event{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:40px;text-align:center}
+.no-event svg{width:56px;height:56px;fill:none;stroke:var(--c4);stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+.no-event p{font-size:var(--ct-md);color:var(--c3);line-height:1.5}
+
+/* ══ RIGHT SIDEBAR ══ */
+.right{width:var(--right-w);flex-shrink:0;background:var(--frame);border-left:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;overflow:hidden;transition:width .25s,opacity .25s}
+.right.shut{width:0;opacity:0;border-left:none;overflow:hidden}
 .rt-head{display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 18px;border-bottom:1px solid rgba(255,255,255,.06);flex-shrink:0}
 .rt-title{font-size:var(--fs-md);font-weight:var(--fw-s);color:var(--c1)}
 .rt-btns{display:flex;gap:2px}
 .tb-b{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .14s}
 .tb-b:hover{background:rgba(255,255,255,.06)}
-.tb-b svg{width:16px;height:16px;fill:none;stroke:var(--c3);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:stroke .14s}
+.tb-b svg{width:16px;height:16px;fill:none;stroke:var(--c3);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .tb-b:hover svg{stroke:var(--c1)}
-.coord-panel{flex:1;overflow-y:auto;padding:0}
-.coord-panel::-webkit-scrollbar{width:3px}.coord-panel::-webkit-scrollbar-thumb{background:rgba(255,255,255,.06);border-radius:3px}
+
+/* PANEL HEADER */
+.rp-pf{padding:14px 18px 10px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.06);flex-shrink:0}
+.rp-info{flex:1;min-width:0}
+.rp-name{font-size:var(--ct-lg);font-weight:var(--fw-b);color:var(--c1);display:flex;align-items:center;gap:6px}
+.rp-meta{font-size:var(--ct-xs);color:var(--c3);margin-top:3px;display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.rp-actions{display:flex;gap:3px;margin-top:6px}
+
+/* TABS */
+.rp-tabs{display:flex;border-bottom:1px solid rgba(255,255,255,.06);padding:0 18px;flex-shrink:0;overflow-x:auto}
+.rp-tabs::-webkit-scrollbar{display:none}
+.rp-tab{padding:10px 0;margin-right:12px;font-size:var(--ct-xs);font-weight:var(--fw-s);color:var(--c3);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:color .15s,border-color .15s;text-transform:uppercase;letter-spacing:.05em}
+.rp-tab:hover{color:var(--c1)}.rp-tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* BODY */
+.rp-body{flex:1;overflow-y:auto;padding:0}.rp-body::-webkit-scrollbar{width:3px}.rp-body::-webkit-scrollbar-thumb{background:rgba(255,255,255,.06);border-radius:3px}
+.rp-panel{display:none;padding:14px 18px}.rp-panel.active{display:block}
+.fs{margin-bottom:16px}
+.fs-t{font-size:var(--ct-xs);font-family:'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--c3);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--c4)}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.f{display:flex;flex-direction:column;gap:4px}.f2{grid-column:span 2}
+.f label{font-size:var(--ct-xs);font-weight:var(--fw-s);color:var(--c3)}
+.f input,.f select,.f textarea{padding:8px 10px;border:1px solid var(--c4);border-radius:6px;background:var(--frame-input);font-family:'Outfit',sans-serif;font-size:var(--ct-sm);color:var(--c1);outline:none;transition:border-color .15s;width:100%}
+.f input:focus,.f select:focus{border-color:var(--accent)}
+.f input::placeholder,.f textarea::placeholder{color:var(--c3)}
+.f select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='rgba(255,255,255,.4)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;padding-right:24px}
+.f select option{background:var(--frame);color:var(--c2)}
+.f input:disabled,.f select:disabled{opacity:.5;cursor:not-allowed}
+.cost-box{padding:10px 12px;background:rgba(255,255,255,.03);border:1px solid var(--c4);border-radius:8px;display:flex;align-items:center;justify-content:space-between;margin-top:8px}
+.cost-label{font-size:var(--ct-xs);color:var(--c3)}
+.cost-val{font-family:'JetBrains Mono',monospace;font-size:var(--ct-lg);font-weight:var(--fw-s);color:var(--amber)}
+
+/* COMMS TIMELINE */
+.tl-item{display:flex;gap:10px;padding:12px 0;border-bottom:1px solid var(--c4)}
+.tl-item:last-child{border-bottom:none}
+.tl-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:4px}
+.tl-content{flex:1}
+.tl-type{font-size:var(--ct-sm);font-weight:var(--fw-s);color:var(--c1);margin-bottom:2px}
+.tl-desc{font-size:var(--ct-xs);color:var(--c3);line-height:1.4}
+.tl-date{font-family:'JetBrains Mono',monospace;font-size:var(--fs-sm);color:var(--c3);margin-top:3px}
+.tl-right{display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0}
+.tl-status{font-size:var(--fs-sm);padding:3px 8px;border-radius:8px;font-weight:var(--fw-s)}
+.tls-done{background:rgba(59,165,93,.14);color:var(--green)}
+.tls-wait{background:rgba(245,166,35,.14);color:var(--amber)}
+.tls-none{background:rgba(255,255,255,.06);color:var(--c3)}
+.relance-btn{padding:4px 10px;border-radius:6px;border:1px solid rgba(245,166,35,.3);color:var(--amber);font-size:var(--fs-sm);font-weight:var(--fw-s);cursor:pointer;background:transparent;font-family:'Outfit',sans-serif;transition:all .14s}
+.relance-btn:hover{background:rgba(245,166,35,.1)}
+.send-btn{padding:4px 10px;border-radius:6px;border:1px solid var(--c4);color:var(--blue);font-size:var(--fs-sm);font-weight:var(--fw-s);cursor:pointer;background:transparent;font-family:'Outfit',sans-serif}
+
+/* SKILLS IN PROFILE TAB */
+.sk-row{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--c4)}
+.sk-row:last-child{border-bottom:none}
+.sk-name{font-size:var(--ct-sm);font-weight:var(--fw-s);color:var(--c1);min-width:90px}
+.sk-stars{font-size:var(--ct-xs);letter-spacing:1px}
+
+/* HISTORY */
+.hist-row{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--c4);font-size:var(--ct-xs)}
+.hist-row:last-child{border-bottom:none}
+.hist-ev{font-weight:var(--fw-s);color:var(--c1);min-width:50px}
+.hist-team{padding:2px 6px;border-radius:4px;font-size:var(--fs-sm);font-weight:var(--fw-s)}
+.hist-role{color:var(--c3);flex:1}
+
+/* FOOTER */
+.rp-footer{padding:10px 18px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
+.btn-sm-d{background:none;border:1px solid rgba(237,66,69,.25);border-radius:6px;padding:6px 12px;font-family:'Outfit',sans-serif;font-size:var(--ct-xs);font-weight:var(--fw-s);color:var(--red);cursor:pointer}
+
+/* COORDINATION PANEL */
+.coord{flex:1;overflow-y:auto;padding:0}.coord::-webkit-scrollbar{width:3px}.coord::-webkit-scrollbar-thumb{background:rgba(255,255,255,.06);border-radius:3px}
 .coord-section{padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.06)}
-.coord-section:last-child{border-bottom:none}
 .coord-label{font-size:var(--ct-xs);font-family:'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--c3);margin-bottom:10px}
 .pole-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--c4)}
 .pole-row:last-child{border-bottom:none}
-.pole-badge{padding:3px 8px;border-radius:4px;font-size:11px;font-weight:var(--fw-s);white-space:nowrap;min-width:80px;text-align:center}
+.pole-badge{padding:3px 8px;border-radius:4px;font-size:var(--fs-sm);font-weight:var(--fw-s);min-width:70px;text-align:center}
 .pole-progress{flex:1;display:flex;flex-direction:column;gap:3px}
-.pole-bar{height:5px;background:var(--c4);border-radius:3px;overflow:hidden;width:100%}
+.pole-bar{height:5px;background:var(--c4);border-radius:3px;overflow:hidden}
 .pole-fill{height:100%;border-radius:2px;transition:width .3s}
 .pole-stat{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--c3);display:flex;justify-content:space-between}
-.pole-deadline{font-family:'JetBrains Mono',monospace;font-size:10px;display:flex;align-items:center;gap:4px;white-space:nowrap}
-.pole-deadline.overdue{color:var(--red)}
-.pole-deadline.soon{color:var(--amber)}
-.pole-deadline.ok{color:var(--c3)}
 .alert-item{display:flex;align-items:flex-start;gap:8px;padding:8px 0;border-bottom:1px solid var(--c4)}
 .alert-item:last-child{border-bottom:none}
 .alert-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:5px}
 .alert-text{font-size:var(--ct-xs);color:var(--c2);line-height:1.4}
-.alert-time{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--c3);margin-top:2px}
-.coord-note{padding:10px 12px;background:var(--frame-input);border-radius:8px;border:1px solid var(--c4);font-size:var(--ct-xs);color:var(--c2);line-height:1.5;margin-bottom:8px}
-.coord-note-author{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--c3);margin-top:4px}
-.rp-pf{padding:16px 18px 10px;display:flex;align-items:flex-start;gap:12px;border-bottom:1px solid rgba(255,255,255,.06);flex-shrink:0}
-.rp-aw{position:relative;width:48px;height:48px;flex-shrink:0}
-.rp-av{width:36px;height:36px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);display:flex;align-items:center;justify-content:center;font-size:var(--fs-sm);font-weight:var(--fw-b);color:#fff;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2}
-.rp-ar{position:absolute;inset:0;z-index:1}.rp-ar svg{width:100%;height:100%}
-.rp-info{flex:1;min-width:0}
-.rp-name{font-size:var(--ct-lg);font-weight:var(--fw-b);color:var(--c1);letter-spacing:-.02em}
-.rp-meta{font-size:var(--ct-xs);color:var(--c3);margin-top:3px;display:flex;flex-wrap:wrap;gap:5px;align-items:center}
-.rp-tabs{display:flex;border-bottom:1px solid rgba(255,255,255,.06);padding:0 18px;flex-shrink:0;overflow-x:auto;gap:0}
-.rp-tabs::-webkit-scrollbar{display:none}
-.rp-tab{padding:10px 0;margin-right:12px;font-size:var(--ct-xs);font-weight:var(--fw-s);color:var(--c3);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:color .15s,border-color .15s;text-transform:uppercase;letter-spacing:.05em}
-.rp-tab:hover{color:var(--c1)}.rp-tab.active{color:var(--accent);border-bottom-color:var(--accent)}
-.rp-body{flex:1;overflow-y:auto;padding:0}.rp-body::-webkit-scrollbar{width:3px}.rp-body::-webkit-scrollbar-thumb{background:rgba(255,255,255,.06);border-radius:3px}
-.rp-panel{display:none;padding:14px 18px}.rp-panel.active{display:block}
-.fs{margin-bottom:18px}
-.fs-t{font-size:var(--ct-xs);font-family:'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--c3);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--c4)}
-.fg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.f{display:flex;flex-direction:column;gap:4px;min-width:0;overflow:hidden}.f2{grid-column:span 2}
-.f label{font-size:var(--ct-xs);font-weight:var(--fw-s);color:var(--c3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.f input,.f select,.f textarea{padding:8px 10px;border:1px solid var(--c4);border-radius:6px;background:var(--frame-input);font-family:'Outfit',sans-serif;font-size:var(--ct-sm);color:var(--c1);outline:none;transition:border-color .15s;width:100%;min-width:0;box-sizing:border-box}
-.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--accent)}
-.f input::placeholder,.f textarea::placeholder{color:var(--c3)}
-.f select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='rgba(255,255,255,.4)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;padding-right:24px;cursor:pointer}
-.f select option{background:var(--frame);color:var(--c2)}
-.f input:disabled,.f select:disabled{opacity:.5;cursor:not-allowed}
-.pres-phase{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:var(--fw-s);letter-spacing:.08em;text-transform:uppercase;padding:8px 0 4px;margin-top:6px}
-.pres-phase.montage{color:#5865f2}
-.pres-phase.exploit{color:var(--accent)}
-.pres-phase.demontage{color:var(--purple)}
-.pres-day{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--c4)}
-.pres-day:last-child{border-bottom:none}
-.pres-day-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--c3);min-width:65px}
-.pres-slots{display:flex;gap:4px;flex:1}
-.pres-slot{padding:4px 8px;border-radius:4px;font-size:10px;font-weight:var(--fw-s);cursor:pointer;transition:all .14s;border:1px solid var(--c4);color:var(--c3);text-align:center;min-width:36px}
-.pres-slot:hover{border-color:var(--c2);color:var(--c1)}
-.pres-slot.on{border-color:var(--green);color:var(--green);background:rgba(59,165,93,.1)}
-.rp-footer{padding:12px 18px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
-.btn-sm-d{background:none;border:1px solid rgba(237,66,69,.3);color:var(--red);padding:6px 14px;border-radius:6px;font-family:'Outfit',sans-serif;font-size:var(--ct-xs);font-weight:var(--fw-s);cursor:pointer;transition:all .14s}
-.btn-sm-d:hover{background:rgba(237,66,69,.1);border-color:var(--red)}
-.no-event{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:40px;text-align:center}
-.no-event svg{width:56px;height:56px;fill:none;stroke:var(--c4);stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
-.no-event p{font-size:var(--ct-md);color:var(--c3);line-height:1.5}
-.no-event .hint{font-size:var(--ct-xs);color:var(--c3);opacity:.6;margin-top:4px}
+.alert-sub{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--c3);margin-top:2px}
+
+/* MODAL */
 .modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:100}
 .modal-bg.show{display:flex}
-.modal{background:var(--frame);border-radius:14px;width:440px;max-height:70vh;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.modal{background:var(--frame);border-radius:14px;width:460px;max-height:70vh;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08)}
 .modal-head{padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between}
 .modal-title{font-size:var(--ct-lg);font-weight:var(--fw-b);color:var(--c1)}
-.modal-body{padding:16px 20px;overflow-y:auto;flex:1}
-.modal-body::-webkit-scrollbar{width:3px}.modal-body::-webkit-scrollbar-thumb{background:rgba(255,255,255,.06);border-radius:3px}
+.modal-body{padding:12px 20px;overflow-y:auto;flex:1}
+.modal-body::-webkit-scrollbar{width:3px}
 .modal-search{width:100%;padding:10px 14px;border:1px solid var(--c4);border-radius:8px;background:var(--frame-input);font-family:'Outfit',sans-serif;font-size:var(--ct-sm);color:var(--c1);outline:none;margin-bottom:12px}
 .modal-search:focus{border-color:var(--accent)}.modal-search::placeholder{color:var(--c3)}
-.modal-contact{display:flex;align-items:center;gap:10px;padding:10px;border-radius:8px;cursor:pointer;transition:background .12s}
-.modal-contact:hover{background:rgba(255,255,255,.06)}
-.modal-contact.assigned{opacity:.4;cursor:default}
-.modal-contact .fn{font-size:var(--ct-sm);font-weight:var(--fw-s);color:var(--c1)}
-.modal-contact .em{font-size:10px;color:var(--c3);font-family:'JetBrains Mono',monospace}
-.mob{display:none;position:fixed;bottom:0;left:0;right:0;height:60px;background:var(--frame);border-top:1px solid rgba(255,255,255,.08);z-index:50;align-items:center;justify-content:space-around;padding:0 8px}
-.mi{display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;padding:6px 0}
-.mi svg{width:20px;height:20px;fill:none;stroke:var(--c3);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:stroke .14s}
-.mi small{font-size:9px;color:var(--c3);transition:color .14s}
-.mi.on svg{stroke:var(--accent)}.mi.on small{color:var(--accent);font-weight:var(--fw-s)}
-@media(max-width:768px){.left-zone,.right{display:none!important}.mob{display:flex}.main{border-radius:0}}
+.modal-filters{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:12px}
+.mf{padding:4px 10px;border-radius:6px;font-size:var(--fs-sm);font-weight:var(--fw-s);border:1px solid var(--c4);color:var(--c3);cursor:pointer;background:transparent;font-family:'Outfit',sans-serif;transition:all .14s}
+.mf:hover{border-color:var(--c3)}.mf.on{border-color:var(--blue);color:var(--blue);background:rgba(88,101,242,.08)}
+.modal-label{font-size:var(--fs-sm);font-weight:var(--fw-s);color:var(--c3);text-transform:uppercase;letter-spacing:.08em;padding:8px 0 4px}
+.mc{display:flex;align-items:center;gap:10px;padding:10px;border-radius:8px;cursor:pointer;transition:background .12s}
+.mc:hover{background:rgba(255,255,255,.04)}
+.mc.taken{opacity:.35;cursor:default}
+.mc-info{flex:1;min-width:0}
+.mc-name{font-size:var(--ct-sm);font-weight:var(--fw-s);color:var(--c1)}
+.mc-meta{font-size:var(--fs-sm);color:var(--c3)}
+.mc-tags{display:flex;gap:3px;margin-top:3px;flex-wrap:wrap}
+.mc-right{display:flex;flex-direction:column;align-items:flex-end;gap:3px;flex-shrink:0}
+.mc-cost{font-family:'JetBrains Mono',monospace;font-size:var(--fs-sm);color:var(--c3)}
+.mc-impact{font-size:10px;color:var(--c3)}
+.mc-add{padding:3px 8px;border-radius:6px;border:1px solid var(--blue);color:var(--blue);font-size:var(--fs-sm);cursor:pointer;background:transparent}
+
+/* TOGGLE */
+.tb-toggle{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .14s}
+.tb-toggle:hover{background:rgba(255,255,255,.06)}.tb-toggle svg{width:16px;height:16px;fill:none;stroke:var(--c3);stroke-width:1.6;stroke-linecap:round}.tb-toggle:hover svg{stroke:var(--c1)}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+.slot,.leader-card{animation:fadeIn .2s ease both}
+
+/* MOBILE */
+@media(max-width:768px){.left-zone,.right{display:none!important}.main{border-radius:0}}
 </style>
 </head>
 <body>
 <div class="app">
+<!-- ══ LEFT ZONE ══ -->
 <div class="left-zone"><div class="left-top">
-<div class="rail">
-<div class="rail-top"><div class="rail-logo"><img src="https://madameloyal.github.io/homepage/mmeloyal_logo_chat.png" alt="ML"></div></div>
-<div class="rail-icons">
-<div class="rail-tous" onclick="swEv(null,this)">ALL</div>
-<div class="rail-sep"></div>
-<div class="rail-ev-wrap" onclick="swEv('pa',this)"><div class="rail-event"><span>PA</span></div></div>
+<div class="rail"><div class="rail-top"><div class="rail-logo"><img src="https://madameloyal.github.io/homepage/LOGO_ROND_JAUNE.png" alt="ML"></div></div><div class="rail-icons">
+<div class="rail-ev-wrap on" onclick="swEv('pa',this)"><div class="rail-event"><span>PA</span></div></div>
 <div class="rail-ev-wrap" onclick="swEv('bo',this)"><div class="rail-event"><span>BO</span></div></div>
 <div class="rail-sep"></div>
-<div class="rail-ev-wrap archived" onclick="swEv('pa25',this)"><div class="rail-event"><span>PA25</span></div></div>
+<div class="rail-ev-wrap archived" onclick="swEv('pa25',this)"><div class="rail-event"><span>25</span></div></div>
 <div class="rail-sep"></div>
 <div class="rail-add">+</div>
 </div></div>
-<div class="nav"><div class="nav-head"><div class="nav-title">Festiflow</div><div class="nav-sub">v0.2 — prototype</div></div><div class="nav-list">
+<div class="nav"><div class="nav-head"><div class="nav-title">Festiflow</div><div class="nav-sub">madame loyal</div></div><div class="nav-list">
 <div class="nav-label">Général</div>
-<a class="ni" href="#"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Dashboard</span><em class="em-design">design</em></a>
-<a class="ni" href="#"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span>Événements</span><em class="em-soon">bientôt</em></a>
+<a class="ni" href="#"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17.5h7M17.5 14v7"/></svg><span>Dashboard</span></a>
+<a class="ni" href="#"><svg viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg><span>Événements</span></a>
 <div class="nav-sep"></div><div class="nav-label">Finance</div>
-<a class="ni" href="#"><svg viewBox="0 0 24 24"><path d="M2 10h20M22 10v9a2 2 0 01-2 2H4a2 2 0 01-2-2v-9"/><path d="M12 6l3 4H9l3-4z"/></svg><span>Billetterie</span><em class="em-live">live</em></a>
+<a class="ni" href="#"><svg viewBox="0 0 24 24"><path d="M2 9l4-4 4 4M6 5v14M22 15l-4 4-4-4M18 19V5"/></svg><span>Billetterie</span><em class="em-live">live</em></a>
 <a class="ni" href="#"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg><span>Budget</span><em class="em-live">live</em></a>
 <div class="nav-sep"></div><div class="nav-label">Staffing · Événement</div>
 <a class="ni on" href="#"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span>Registre</span><em class="em-design">design</em></a>
 <a class="ni" href="#"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M12 11h4M12 16h4M8 11h.01M8 16h.01"/></svg><span>Présence</span><em class="em-soon">bientôt</em></a>
-<a class="ni" href="#"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg><span>Catering</span><em class="em-soon">bientôt</em></a>
+<a class="ni" href="#"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg><span>Catering</span><em class="em-soon">bientôt</em></a>
 <a class="ni" href="#"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg><span>Transport</span><em class="em-soon">bientôt</em></a>
 <a class="ni" href="#"><svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1z"/><path d="M9 21V12h6v9"/></svg><span>Hébergement</span><em class="em-soon">bientôt</em></a>
 <div class="nav-sep"></div><div class="nav-label">Base RH · Permanent</div>
 <a class="ni" href="contacts.html"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg><span>Contacts</span></a>
 <a class="ni" href="#"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span>Admin / Paie</span><em class="em-soon">bientôt</em></a>
-<div class="nav-sep"></div><div class="nav-label">Programmation</div>
-<a class="ni" href="#"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span>Artistes</span><em class="em-soon">bientôt</em></a>
-<a class="ni" href="#"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M12 11h4M12 16h4M8 11h.01M8 16h.01"/></svg><span>Guest List</span><em class="em-api">sheets</em></a>
 <div class="nav-sep"></div><div class="nav-label">Communication</div>
-<a class="ni" href="#"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg><span>FAQ</span><em class="em-live">live</em></a>
-<a class="ni" href="#"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 7.5v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg><span>Social Media</span><em class="em-soon">bientôt</em></a>
 <a class="ni" href="#"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg><span>Newsletters</span><em class="em-api">brevo</em></a>
 <a class="ni" href="#"><svg viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg><span>Médias</span><em class="em-live">live</em></a>
 </div></div>
 </div>
-<div class="left-bottom"><div class="lb-wrap"><img class="lb-img" src="https://madameloyal.github.io/homepage/leo_profile.jpeg" alt="Leo"><div class="lb-hex"><svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="lbg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#d4522a"/><stop offset="100%" stop-color="#9b59b6"/></linearGradient></defs><polygon points="50,2 93,25 93,75 50,98 7,75 7,25" stroke="url(#lbg)" stroke-width="1.5"/></svg></div></div><div class="lb-name"><div class="lb-user">Leo</div></div><div class="lb-icons"><div class="lb-b"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div></div></div></div>
+<div class="left-bottom"><div class="lb-wrap"><img class="lb-img" src="https://madameloyal.github.io/homepage/leo_profile.jpeg" alt="Leo"><div class="lb-hex"><svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="lbg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#d4522a"/><stop offset="100%" stop-color="#9b59b6"/></linearGradient></defs><polygon points="50,2 93,25 93,75 50,98 7,75 7,25" stroke="url(#lbg)" stroke-width="1.5"/></svg></div></div><div class="lb-name"><div class="lb-user">Leo</div></div></div></div>
 
+<!-- ══ MAIN ══ -->
 <div class="main">
 <div class="topbar">
   <div class="topbar-left">
     <div class="page-title">Registre</div>
     <div class="page-count" id="pgCount">0</div>
-    <div class="ev-ctx" id="evCtx" style="display:none"></div>
+    <div class="ev-ctx" id="evCtx">Paris XXL 2026</div>
   </div>
   <div class="topbar-right">
-    <div class="view-toggle">
-      <button class="vt-btn on" onclick="setView('admin',this)">Admin</button>
-      <button class="vt-btn" onclick="setView('pole',this)">Pôle Leader</button>
-    </div>
-    <button class="btn-primary" id="btnAdd" onclick="openAddModal()" style="display:none"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Assigner</button>
+    <button class="btn-primary" id="btnAdd" onclick="openModal()"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Assigner</button>
     <div class="tb-toggle" onclick="document.getElementById('right').classList.toggle('shut')"><svg viewBox="0 0 24 24"><rect x="15" y="3" width="6" height="18" rx="1"/><path d="M3 12h8M8 8l4 4-4 4"/></svg></div>
   </div>
 </div>
-<div class="content">
-<div id="eventContent" style="display:none">
-  <div class="stats-bar" id="statsBar"></div>
-  <div class="toolbar">
-    <div class="search-wrap"><svg class="search-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><input type="text" placeholder="Rechercher nom, équipe, rôle…" id="si" oninput="filt()"></div>
-    <select class="filter" id="tf" onchange="filt()"><option value="">Équipe</option><option>Production</option><option>Technique Scène</option><option>Technique Site</option><option>Aménagement</option><option>Artistique</option><option>Communication</option><option>Scénographie</option><option>Performeur</option><option>Prestataire Externe</option><option>Partenariat</option><option>Hybride</option></select>
-    <select class="filter" id="asf" onchange="filt()"><option value="">Statut</option><option value="confirmed">Confirmé</option><option value="invited">Invité</option><option value="cancelled">Annulé</option></select>
-    <div class="filter-count" id="fc"></div>
+<div class="content" id="mainContent">
+  <div class="lineup-bar">
+    <button class="lu-tab on">Lineup A</button>
+    <button class="lu-tab">Lineup B (budget)</button>
+    <button class="lu-tab draft">+ Variante</button>
+    <div class="lu-imp">Importer : <button class="lu-imp-btn">PA25</button><button class="lu-imp-btn">BO25</button></div>
+    <button class="lu-submit">Soumettre pour validation</button>
   </div>
-  <div class="table-wrap"><table><thead id="thead"></thead><tbody id="tb"></tbody></table></div>
+  <div class="metrics" id="metricsBar"></div>
+  <div class="roster-wrap" id="rosterWrap"></div>
 </div>
-<div id="noEvent">
-  <div class="no-event">
-    <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
-    <p>Sélectionnez un événement<br>dans le rail pour voir les assignations</p>
-    <span class="hint">Le Registre est toujours lié à un événement spécifique</span>
-  </div>
 </div>
-</div></div>
 
+<!-- ══ RIGHT SIDEBAR ══ -->
 <div class="right" id="right">
-  <div id="rCoord">
-    <div class="rt-head"><div class="rt-title">Coordination staffing</div></div>
-    <div class="coord-panel" id="coordPanel"></div>
-  </div>
-  <div id="rDetail" style="display:none">
-    <div class="rt-head"><div class="rt-title" id="rpT">Assignation</div><div class="rt-btns"><div class="tb-b" onclick="backToCoord()"><svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></div><div class="tb-b" onclick="closeDetail()"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div></div></div>
-    <div class="rp-pf">
-      <div class="rp-aw"><div class="rp-av" id="rpA"></div><div class="rp-ar"><svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="rpg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#d4522a"/><stop offset="100%" stop-color="#9b59b6"/></linearGradient></defs><polygon points="50,2 93,25 93,75 50,98 7,75 7,25" stroke="url(#rpg)" stroke-width="1.8"/></svg></div></div>
-      <div class="rp-info"><div class="rp-name" id="rpN"></div><div class="rp-meta" id="rpM"></div></div>
-    </div>
-    <div class="rp-tabs" id="rpTabs"></div>
-    <div class="rp-body" id="rpBody"></div>
-    <div class="rp-footer"><button class="btn-sm-d">Désassigner</button><button class="btn-primary" onclick="closeDetail()"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Enregistrer</button></div>
-  </div>
+  <div id="rCoord"></div>
+  <div id="rDetail" style="display:none"></div>
 </div>
 
-<div class="modal-bg" id="addModal" onclick="if(event.target===this)closeAddModal()">
-  <div class="modal">
-    <div class="modal-head"><div class="modal-title">Assigner un contact</div><div class="tb-b" onclick="closeAddModal()"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div></div>
-    <div class="modal-body">
-      <input class="modal-search" placeholder="Rechercher dans les contacts…" id="modalSearch" oninput="filterModal()">
-      <div id="modalList"></div>
-    </div>
-  </div>
-</div>
-
-<div class="mob"><div class="mi"><svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1z"/></svg><small>Home</small></div><div class="mi"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17.5h7M17.5 14v7"/></svg><small>Dash</small></div><div class="mi on"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><small>Registre</small></div><div class="mi"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg><small>Modules</small></div><div class="mi"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg><small>Profil</small></div></div>
+<!-- MODAL -->
+<div class="modal-bg" id="addModal" onclick="if(event.target===this)closeModal()">
+<div class="modal">
+<div class="modal-head"><div class="modal-title">Assigner un contact</div><div class="tb-b" onclick="closeModal()"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div></div>
+<div class="modal-body">
+<input class="modal-search" placeholder="Nom, compétence, ville…" id="modalSearch" oninput="filterModal()">
+<div class="modal-filters"><button class="mf on" onclick="this.classList.toggle('on')">PA25 alumni</button><button class="mf" onclick="this.classList.toggle('on')">Local uniquement</button><button class="mf" onclick="this.classList.toggle('on')">Budget &lt; 300€/j</button></div>
+<div id="modalList"></div>
+</div></div></div>
 </div>
 
 <script>
-const EVENTS={pa:{id:'pa',name:'Paris XXL 2026',short:'PA26',dates:'07→17 mars 2026',status:'active',phases:[{name:'Montage',cls:'montage',days:['J-3\n7/3','J-2\n8/3','J-1\n9/3','J0\n10/3']},{name:'Exploitation',cls:'exploit',days:['J1\n11/3','J2\n12/3','J3\n13/3','J4\n14/3']},{name:'Démontage',cls:'demontage',days:['J+1\n15/3','J+2\n16/3','J+3\n17/3']}]},bo:{id:'bo',name:'Bordeaux ML × SONORA 2026',short:'BO26',dates:'19→22 juin 2026',status:'active',phases:[{name:'Montage',cls:'montage',days:['J-2\n17/6','J-1\n18/6']},{name:'Exploitation',cls:'exploit',days:['J1\n19/6','J2\n20/6']},{name:'Démontage',cls:'demontage',days:['J+1\n21/6','J+2\n22/6']}]},pa25:{id:'pa25',name:'Paris XXL 2025',short:'PA25',dates:'08→18 mars 2025',status:'archived',phases:[{name:'Montage',cls:'montage',days:['J-3','J-2','J-1','J0']},{name:'Exploitation',cls:'exploit',days:['J1','J2','J3','J4']},{name:'Démontage',cls:'demontage',days:['J+1','J+2','J+3']}]}};
-
-const D=[
-  {contact_id:1,prenom:'Sébastien',nom:'Janvier',tel:'+33664234321',email:'sebastienjanvier33@gmail.com',ville:'Bordeaux',regime_alimentaire:'Pas de régime',contrat_type:'Prestataire externe',carte_sncf:'',vehicule:true,local:false,tags:[{name:'Électricien',level:5},{name:'Lumière',level:4}],assignments:[{event_id:'pa',team:'Technique Scène',role:'Direction Technique',status:'confirmed',transport_aller:'Bordeaux > Paris Montparnasse',transport_aller_date:'06/03/2026',transport_retour:'Paris Montparnasse > Bordeaux',transport_retour_date:'18/03/2026',hebergement:'Hotel Holiday Inn',chambre_pref:'Mehdi Gautheur',autonome_transport:false,autonome_hebergement:false},{event_id:'pa25',team:'Technique Scène',role:'Direction Technique',status:'completed',transport_aller:'Bordeaux > Paris',transport_aller_date:'',transport_retour:'Paris > Bordeaux',transport_retour_date:'',hebergement:'Hotel Holiday Inn',chambre_pref:'',autonome_transport:false,autonome_hebergement:false}]},
-  {contact_id:2,prenom:'Karen',nom:'Laloum',tel:'+33614950200',email:'karen@agence-episode.fr',ville:'Paris',regime_alimentaire:'Végétarien',contrat_type:'Prestataire externe',vehicule:true,local:true,tags:[{name:'Régisseur',level:5}],assignments:[{event_id:'pa',team:'Production',role:'Directrice Production',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true},{event_id:'bo',team:'Production',role:'Directrice Production',status:'invited',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:false,autonome_hebergement:false},{event_id:'pa25',team:'Production',role:'Directrice Production',status:'completed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true}]},
-  {contact_id:3,prenom:'Stéphane',nom:'Harrouch',tel:'+33670615501',email:'stephane@regies-productions.com',ville:'Montreuil',regime_alimentaire:'Halal',contrat_type:'Auto-entrepreneur',vehicule:true,local:true,tags:[{name:'Électricien',level:4},{name:'Régisseur',level:5}],assignments:[{event_id:'pa',team:'Technique Site',role:'Directeur Technique',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true},{event_id:'pa25',team:'Technique Site',role:'Directeur Technique',status:'completed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true}]},
-  {contact_id:4,prenom:'Pierre',nom:'Kestemont',tel:'+33612442799',email:'p.kestemont@gmail.com',ville:'Bruxelles',regime_alimentaire:'Pas de régime',contrat_type:'CDI',carte_sncf:'Liberté',vehicule:false,local:false,tags:[{name:'Régisseur',level:4}],assignments:[{event_id:'pa',team:'Aménagement',role:'Régisseur Général Site',status:'confirmed',transport_aller:'Bruxelles Midi > Paris Nord',transport_aller_date:'06/03/2026',transport_retour:'Paris Nord > Bruxelles Midi',transport_retour_date:'18/03/2026',hebergement:'Hotel Holiday Inn',chambre_pref:'Camille Faurie',autonome_transport:false,autonome_hebergement:false},{event_id:'bo',team:'Aménagement',role:'Régisseur Général Site',status:'invited',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:false,autonome_hebergement:false}]},
-  {contact_id:5,prenom:'Camille',nom:'Faurie',tel:'+33658428615',email:'camillefaurie.regie@gmail.com',ville:'Lyon',regime_alimentaire:'Vegan',contrat_type:'Intermittent',carte_sncf:'Avantage Jeune',vehicule:false,local:false,tags:[{name:'Régisseur',level:3}],assignments:[{event_id:'pa',team:'Aménagement',role:'Régisseuse Générale',status:'confirmed',transport_aller:'Lyon Part-Dieu > Paris Gare de Lyon',transport_aller_date:'06/03/2026',transport_retour:'Paris Gare de Lyon > Lyon Part-Dieu',transport_retour_date:'18/03/2026',hebergement:'Hotel Holiday Inn',chambre_pref:'Pierre Kestemont',autonome_transport:false,autonome_hebergement:false}]},
-  {contact_id:6,prenom:'Sarah',nom:'Renard',tel:'+33617860589',email:'sarah@agence-episode.fr',ville:'Paris',regime_alimentaire:'Pas de régime',contrat_type:'Auto-entrepreneur',vehicule:true,local:true,tags:[],assignments:[{event_id:'pa',team:'Production',role:'Directrice Festival',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true},{event_id:'bo',team:'Production',role:'Directrice Festival',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:false,autonome_hebergement:false}]},
-  {contact_id:7,prenom:'Pierro',nom:'Le Moing',tel:'+33667219606',email:'pierrolemoing@gmail.com',ville:'Nantes',regime_alimentaire:'Pas de régime',contrat_type:'Intermittent',vehicule:false,local:false,tags:[{name:'Scénographe',level:3}],assignments:[{event_id:'pa',team:'Scénographie',role:'Chef de Projet',status:'confirmed',transport_aller:'Nantes > Paris Montparnasse',transport_aller_date:'07/03/2026',transport_retour:'Paris Montparnasse > Nantes',transport_retour_date:'18/03/2026',hebergement:'Hotel Holiday Inn',chambre_pref:'',autonome_transport:false,autonome_hebergement:false}]},
-  {contact_id:8,prenom:'Mehdi',nom:'Gautheur',tel:'+33683761033',email:'son.mmeloyal@gmail.com',ville:'Toulouse',regime_alimentaire:'Halal',contrat_type:'Intermittent',carte_sncf:'Liberté',vehicule:false,local:false,tags:[{name:'Son',level:5},{name:'Régisseur',level:3}],assignments:[{event_id:'pa',team:'Technique Scène',role:'Superviseur Son',status:'confirmed',transport_aller:'Toulouse Matabiau > Paris Montparnasse',transport_aller_date:'06/03/2026',transport_retour:'Paris Montparnasse > Toulouse',transport_retour_date:'18/03/2026',hebergement:'Hotel Holiday Inn',chambre_pref:'Sébastien Janvier',autonome_transport:false,autonome_hebergement:false},{event_id:'pa25',team:'Technique Scène',role:'Superviseur Son',status:'completed',transport_aller:'Toulouse > Paris',transport_aller_date:'',transport_retour:'Paris > Toulouse',transport_retour_date:'',hebergement:'Hotel Holiday Inn',chambre_pref:'',autonome_transport:false,autonome_hebergement:false}]},
-  {contact_id:9,prenom:'Nicolas',nom:'Colle',tel:'+33663381214',email:'colle.nicolas@gmail.com',ville:'Marseille',regime_alimentaire:'Pas de régime',contrat_type:'Auto-entrepreneur',carte_sncf:'Avantage Week-end',vehicule:false,local:false,tags:[{name:'Lumière',level:5}],assignments:[{event_id:'pa',team:'Technique Scène',role:'Superviseur Light',status:'confirmed',transport_aller:'Marseille St-Charles > Paris Gare de Lyon',transport_aller_date:'06/03/2026',transport_retour:'Paris Gare de Lyon > Marseille',transport_retour_date:'18/03/2026',hebergement:'Hotel Holiday Inn',chambre_pref:'',autonome_transport:false,autonome_hebergement:false}]},
-  {contact_id:10,prenom:'Grégoire',nom:'Germain',tel:'',email:'greg@agence-episode.fr',ville:'Paris',regime_alimentaire:'Pas de régime',contrat_type:'Auto-entrepreneur',vehicule:true,local:true,tags:[{name:'Photographe',level:4},{name:'Vidéaste',level:3}],assignments:[{event_id:'pa',team:'Communication',role:'Dir. Communication',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true}]},
-  {contact_id:11,prenom:'Hippolyte',nom:'Court',tel:'+33695088738',email:'hippolyte@agence-episode.fr',ville:'Paris',regime_alimentaire:'Pas de régime',contrat_type:'Auto-entrepreneur',vehicule:false,local:true,tags:[],assignments:[{event_id:'pa',team:'Artistique',role:'Resp. Prod/Log Artistique',status:'invited',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true}]},
-  {contact_id:12,prenom:'Gilles',nom:'Chanu',tel:'+33689734582',email:'gilleschanu@icloud.com',ville:'Villepinte',regime_alimentaire:'Pas de régime',contrat_type:'Intermittent',vehicule:true,local:true,tags:[{name:'Électricien',level:5}],assignments:[{event_id:'pa',team:'Technique Site',role:'Chef Électro',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true},{event_id:'pa25',team:'Technique Site',role:'Chef Électro',status:'completed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true}]},
-  {contact_id:13,prenom:'Miad',nom:'Bensalem',tel:'+33672904111',email:'miad.bar@gmail.com',ville:'Paris',regime_alimentaire:'Halal',contrat_type:'Auto-entrepreneur',vehicule:false,local:true,tags:[{name:'Barman',level:3}],assignments:[{event_id:'pa',team:'Production',role:'Chef de Bar',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true}]},
-  {contact_id:14,prenom:'Coline',nom:'Vasseur',tel:'+33645123890',email:'coline.vasseur@live.fr',ville:'Lille',regime_alimentaire:'Végétarien',contrat_type:'Intermittent',carte_sncf:'Avantage Jeune',vehicule:false,local:false,tags:[],assignments:[{event_id:'pa',team:'Performeur',role:'Chorégraphe / Performeuse',status:'confirmed',transport_aller:'Lille Flandres > Paris Nord',transport_aller_date:'12/03/2026',transport_retour:'Paris Nord > Lille',transport_retour_date:'15/03/2026',hebergement:'Hotel Holiday Inn',chambre_pref:'',autonome_transport:false,autonome_hebergement:false}]},
-  {contact_id:15,prenom:'Margaux',nom:'Delattre',tel:'+33678451209',email:'margaux.delattre@outlook.com',ville:'Paris',regime_alimentaire:'Sans gluten',contrat_type:'CDD',carte_sncf:'Liberté',vehicule:true,local:true,tags:[],assignments:[{event_id:'pa',team:'Partenariat',role:'Resp. Partenariats',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true}]},
-  {contact_id:16,prenom:'Alexandre',nom:'Morel',tel:'+33690127453',email:'alex.morel@gmail.com',ville:'Strasbourg',regime_alimentaire:'Pas de régime',contrat_type:'Auto-entrepreneur',vehicule:false,local:false,tags:[{name:'Photographe',level:4}],assignments:[{event_id:'pa',team:'Artistique',role:'Directeur Artistique',status:'confirmed',transport_aller:'Strasbourg > Paris Est',transport_aller_date:'07/03/2026',transport_retour:'Paris Est > Strasbourg',transport_retour_date:'18/03/2026',hebergement:'Hotel Holiday Inn',chambre_pref:'',autonome_transport:false,autonome_hebergement:false}]},
-  {contact_id:17,prenom:'Lola',nom:'Garnier',tel:'+33654789012',email:'lola.garnier@agence-episode.fr',ville:'Paris',regime_alimentaire:'Vegan',contrat_type:'CDD',vehicule:false,local:true,tags:[{name:'Vidéaste',level:4},{name:'Photographe',level:3}],assignments:[{event_id:'pa',team:'Communication',role:'Vidéaste / Photographe',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true}]},
-  {contact_id:18,prenom:'Julien',nom:'Petit',tel:'+33601234567',email:'julien.petit@gmail.com',ville:'Rennes',regime_alimentaire:'Pas de régime',contrat_type:'Prestataire externe',vehicule:true,local:false,tags:[{name:'Son',level:4}],assignments:[{event_id:'pa',team:'Prestataire Externe',role:'Ingénieur Son FOH',status:'confirmed',transport_aller:'Rennes > Paris Montparnasse',transport_aller_date:'07/03/2026',transport_retour:'Paris Montparnasse > Rennes',transport_retour_date:'18/03/2026',hebergement:'Hotel Holiday Inn',chambre_pref:'',autonome_transport:false,autonome_hebergement:false}]},
-  {contact_id:19,prenom:'Amira',nom:'Benali',tel:'+33678901234',email:'amira.b@live.fr',ville:'Lyon',regime_alimentaire:'Halal',contrat_type:'Bénévole',carte_sncf:'Avantage Jeune',vehicule:false,local:false,tags:[{name:'Runner',level:1}],assignments:[{event_id:'pa',team:'Hybride',role:'Runner Général',status:'invited',transport_aller:'Lyon Part-Dieu > Paris',transport_aller_date:'12/03/2026',transport_retour:'Paris > Lyon',transport_retour_date:'15/03/2026',hebergement:'',chambre_pref:'',autonome_transport:false,autonome_hebergement:false}]},
-  {contact_id:20,prenom:'Thomas',nom:'Durand',tel:'+33687654321',email:'thomas.durand@outlook.fr',ville:'Villepinte',regime_alimentaire:'Pas de régime',contrat_type:'Intermittent',vehicule:true,local:true,tags:[{name:'Électricien',level:3},{name:'Chauffeur',level:2}],assignments:[{event_id:'pa',team:'Technique Site',role:'Électricien',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true},{event_id:'pa25',team:'Technique Site',role:'Stagiaire Électro',status:'completed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true}]},
-];
-
-const PRESENCE={};
-function presKey(c,e,d){return`${c}_${e}_${d}`}
-function seedPresence(){const ev=EVENTS.pa;if(!ev)return;let t=0;ev.phases.forEach(p=>t+=p.days.length);D.forEach(c=>{const a=c.assignments.find(x=>x.event_id==='pa');if(!a||a.status==='cancelled')return;const f=a.status==='confirmed'?.8:.3;for(let i=0;i<t;i++)PRESENCE[presKey(c.contact_id,'pa',i)]=Math.random()<f})}
-seedPresence();
-
-const DEADLINES={pa:{'Production':{deadline:'2026-02-15',leader:'Karen Laloum'},'Technique Scène':{deadline:'2026-02-20',leader:'Sébastien Janvier'},'Technique Site':{deadline:'2026-02-20',leader:'Stéphane Harrouch'},'Aménagement':{deadline:'2026-02-25',leader:'Pierre Kestemont'},'Communication':{deadline:'2026-02-28',leader:'Grégoire Germain'},'Artistique':{deadline:'2026-03-01',leader:'Alexandre Morel'},'Scénographie':{deadline:'2026-02-25',leader:'Pierro Le Moing'},'Performeur':{deadline:'2026-03-05',leader:'—'},'Partenariat':{deadline:'2026-02-28',leader:'Margaux Delattre'},'Hybride':{deadline:'2026-03-01',leader:'—'},'Prestataire Externe':{deadline:'2026-02-28',leader:'—'}},bo:{'Production':{deadline:'2026-05-15',leader:'Karen Laloum'},'Aménagement':{deadline:'2026-05-20',leader:'Pierre Kestemont'}}};
-const COORD_NOTES={pa:[{text:'Relancer Greg pour la liste Communication — 2 postes manquants',author:'Karen',date:'12/03/2026'},{text:'Amira (Runner) pas encore confirmée — vérifier dispo',author:'Leo',date:'11/03/2026'}],bo:[{text:'Commencer staffing Bordeaux après Paris XXL',author:'Karen',date:'10/03/2026'}]};
+/* ═══ DATA ═══ */
+const EVENTS={
+  pa:{id:'pa',name:'Paris XXL 2026',short:'PA26',status:'active'},
+  bo:{id:'bo',name:'Bordeaux ML × SONORA 2026',short:'BO26',status:'active'},
+  pa25:{id:'pa25',name:'Paris XXL 2025',short:'PA25',status:'archived'}
+};
 
 const TC={'Technique Scène':{bg:'rgba(88,101,242,.15)',c:'#7c8af2'},'Technique Site':{bg:'rgba(155,89,182,.15)',c:'#b580d4'},'Production':{bg:'rgba(59,165,93,.15)',c:'#5cc77a'},'Aménagement':{bg:'rgba(245,166,35,.15)',c:'#f5a623'},'Communication':{bg:'rgba(212,82,42,.15)',c:'#e07050'},'Scénographie':{bg:'rgba(155,89,182,.15)',c:'#c490e0'},'Artistique':{bg:'rgba(237,66,69,.15)',c:'#f08080'},'Performeur':{bg:'rgba(59,165,93,.15)',c:'#6dd89a'},'Prestataire Externe':{bg:'rgba(255,255,255,.08)',c:'var(--c3)'},'Partenariat':{bg:'rgba(245,166,35,.15)',c:'#f0c060'},'Hybride':{bg:'rgba(212,82,42,.15)',c:'#e8a070'}};
 const AG=['linear-gradient(140deg,#d4522a,#7d1e0a)','linear-gradient(140deg,#5865f2,#3644c4)','linear-gradient(140deg,#3ba55d,#1e6b3a)','linear-gradient(140deg,#f5a623,#c07a10)','linear-gradient(140deg,#9b59b6,#6d2d8a)','linear-gradient(140deg,#ed4245,#a82d2f)','linear-gradient(140deg,#3b82f6,#1d4ed8)','linear-gradient(140deg,#a855f7,#6d28d9)'];
 const ini=(p,n)=>(p[0]||'')+(n[0]||''),grd=i=>AG[i%AG.length];
-const hx=(i,p,n)=>`<div class="haw"><div class="hav" style="background:${grd(i)}">${ini(p,n)}</div><div class="har"><svg viewBox="0 0 100 100" fill="none"><polygon points="50,2 93,25 93,75 50,98 7,75 7,25" stroke="rgba(255,255,255,.12)" stroke-width="2"/></svg></div></div>`;
-const statusLabel={confirmed:'Confirmé',invited:'Invité',cancelled:'Annulé',completed:'Terminé'};
-const statusCls={confirmed:'as-confirmed',invited:'as-invited',cancelled:'as-cancelled',completed:'as-completed'};
+const starsHtml=(lvl)=>{let s='';for(let i=1;i<=5;i++)s+=i<=lvl?'<span class="s-on">★</span>':'<span class="s-off">★</span>';return s};
 
-let activeEvent=null,sid=null,viewMode='admin',poleLock='Communication',sortCol='',sortDir=1;
+/* Pôle leaders (not rated — they're managers) */
+const POLES = {
+  'Production':{leader_id:2,leader_name:'Karen Laloum',title:'Directrice Production'},
+  'Technique Scène':{leader_id:1,leader_name:'Sébastien Janvier',title:'Direction Technique'},
+  'Technique Site':{leader_id:3,leader_name:'Stéphane Harrouch',title:'Directeur Technique'},
+  'Aménagement':{leader_id:4,leader_name:'Pierre Kestemont',title:'Régisseur Général Site'},
+  'Communication':{leader_id:10,leader_name:'Grégoire Germain',title:'Dir. Communication'},
+  'Artistique':{leader_id:16,leader_name:'Alexandre Morel',title:'Directeur Artistique'},
+  'Scénographie':{leader_id:7,leader_name:'Pierro Le Moing',title:'Chef de Projet'},
+  'Partenariat':{leader_id:15,leader_name:'Margaux Delattre',title:'Resp. Partenariats'},
+};
 
-function swEv(evId,el){
-  document.querySelectorAll('.rail-ev-wrap,.rail-tous').forEach(w=>w.classList.remove('on'));
-  if(el)el.classList.add('on');
-  activeEvent=evId;sid=null;
-  const ctx=document.getElementById('evCtx');
-  if(evId&&EVENTS[evId]){const ev=EVENTS[evId];ctx.textContent=ev.name;ctx.className='ev-ctx'+(ev.status==='archived'?' archived':'');ctx.style.display='';document.getElementById('eventContent').style.display='';document.getElementById('noEvent').style.display='none';document.getElementById('btnAdd').style.display=''}
-  else{ctx.style.display='none';document.getElementById('eventContent').style.display='none';document.getElementById('noEvent').style.display='';document.getElementById('btnAdd').style.display='none'}
-  backToCoord();buildTableHeader();updateStats();filt();buildCoordPanel();
+const D=[
+  {contact_id:1,prenom:'Sébastien',nom:'Janvier',tel:'+33664234321',email:'sebastienjanvier33@gmail.com',ville:'Bordeaux',regime:'Pas de régime',contrat:'Prestataire externe',carte_sncf:'',vehicule:true,local:false,tags:[{name:'Électricien',level:5},{name:'Lumière',level:4}],rate_a:450,rate_b:600,
+    assignments:[{event_id:'pa',team:'Technique Scène',role:'Direction Technique',status:'confirmed',transport_aller:'Bordeaux > Paris Montparnasse',transport_aller_date:'06/03/2026',transport_retour:'Paris Montparnasse > Bordeaux',transport_retour_date:'18/03/2026',hebergement:'Hotel Holiday Inn',chambre_pref:'Mehdi Gautheur',autonome_transport:false,autonome_hebergement:false,ml1_sent:'2026-01-15',ml1_done:'2026-01-18',ml2_sent:'2026-02-10',ml2_done:'2026-02-14'}]},
+  {contact_id:2,prenom:'Karen',nom:'Laloum',tel:'+33614950200',email:'karen@agence-episode.fr',ville:'Paris',regime:'Végétarien',contrat:'Prestataire externe',vehicule:true,local:true,tags:[{name:'Régisseur',level:5}],rate_a:400,rate_b:550,
+    assignments:[{event_id:'pa',team:'Production',role:'Directrice Production',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true,ml1_sent:'2026-01-10',ml1_done:'2026-01-12',ml2_sent:'2026-02-05',ml2_done:null}]},
+  {contact_id:3,prenom:'Stéphane',nom:'Harrouch',tel:'+33670615501',email:'stephane@regies-productions.com',ville:'Montreuil',regime:'Halal',contrat:'Auto-entrepreneur',vehicule:true,local:true,tags:[{name:'Électricien',level:4},{name:'Régisseur',level:5}],rate_a:380,rate_b:500,
+    assignments:[{event_id:'pa',team:'Technique Site',role:'Directeur Technique',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true,ml1_sent:'2026-01-12',ml1_done:'2026-01-14',ml2_sent:'2026-02-08',ml2_done:'2026-02-10'}]},
+  {contact_id:4,prenom:'Pierre',nom:'Kestemont',tel:'+33612442799',email:'p.kestemont@gmail.com',ville:'Bruxelles',regime:'Pas de régime',contrat:'CDI',carte_sncf:'Liberté',vehicule:false,local:false,tags:[{name:'Régisseur',level:4}],rate_a:350,rate_b:450,
+    assignments:[{event_id:'pa',team:'Aménagement',role:'Régisseur Général Site',status:'confirmed',transport_aller:'Bruxelles Midi > Paris Nord',transport_aller_date:'06/03/2026',transport_retour:'Paris Nord > Bruxelles Midi',transport_retour_date:'18/03/2026',hebergement:'Hotel Holiday Inn',chambre_pref:'Camille Faurie',autonome_transport:false,autonome_hebergement:false,ml1_sent:'2026-01-20',ml1_done:'2026-01-22',ml2_sent:'2026-02-15',ml2_done:'2026-02-20'}]},
+  {contact_id:5,prenom:'Camille',nom:'Faurie',tel:'+33658428615',email:'camillefaurie.regie@gmail.com',ville:'Lyon',regime:'Vegan',contrat:'Intermittent',carte_sncf:'Avantage Jeune',vehicule:false,local:false,tags:[{name:'Régisseur',level:3}],rate_a:280,rate_b:350,
+    assignments:[{event_id:'pa',team:'Aménagement',role:'Régisseuse Générale',status:'confirmed',transport_aller:'Lyon Part-Dieu > Paris Gare de Lyon',transport_aller_date:'06/03/2026',transport_retour:'Paris Gare de Lyon > Lyon Part-Dieu',transport_retour_date:'18/03/2026',hebergement:'Hotel Holiday Inn',chambre_pref:'Pierre Kestemont',autonome_transport:false,autonome_hebergement:false,ml1_sent:'2026-01-25',ml1_done:'2026-01-28',ml2_sent:'2026-02-18',ml2_done:'2026-02-22'}]},
+  {contact_id:6,prenom:'Sarah',nom:'Renard',tel:'+33617860589',email:'sarah@agence-episode.fr',ville:'Paris',regime:'Pas de régime',contrat:'Auto-entrepreneur',vehicule:true,local:true,tags:[],rate_a:0,rate_b:0,
+    assignments:[{event_id:'pa',team:'Production',role:'Directrice Festival',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true,ml1_sent:'2026-01-08',ml1_done:'2026-01-09',ml2_sent:'2026-02-01',ml2_done:'2026-02-03'}]},
+  {contact_id:7,prenom:'Pierro',nom:'Le Moing',tel:'+33667219606',email:'pierrolemoing@gmail.com',ville:'Nantes',regime:'Pas de régime',contrat:'Intermittent',vehicule:false,local:false,tags:[{name:'Scénographe',level:3}],rate_a:300,rate_b:400,
+    assignments:[{event_id:'pa',team:'Scénographie',role:'Chef de Projet',status:'confirmed',transport_aller:'Nantes > Paris Montparnasse',transport_aller_date:'07/03/2026',transport_retour:'Paris Montparnasse > Nantes',transport_retour_date:'18/03/2026',hebergement:'Hotel Holiday Inn',chambre_pref:'',autonome_transport:false,autonome_hebergement:false,ml1_sent:'2026-02-01',ml1_done:null,ml2_sent:null,ml2_done:null}]},
+  {contact_id:8,prenom:'Mehdi',nom:'Gautheur',tel:'+33683761033',email:'son.mmeloyal@gmail.com',ville:'Toulouse',regime:'Halal',contrat:'Intermittent',carte_sncf:'Liberté',vehicule:false,local:false,tags:[{name:'Son',level:5},{name:'Régisseur',level:3}],rate_a:350,rate_b:525,
+    assignments:[{event_id:'pa',team:'Technique Scène',role:'Superviseur Son',status:'confirmed',transport_aller:'Toulouse Matabiau > Paris Montparnasse',transport_aller_date:'06/03/2026',transport_retour:'Paris Montparnasse > Toulouse',transport_retour_date:'18/03/2026',hebergement:'Hotel Holiday Inn',chambre_pref:'Sébastien Janvier',autonome_transport:false,autonome_hebergement:false,ml1_sent:'2026-01-15',ml1_done:'2026-01-17',ml2_sent:'2026-02-12',ml2_done:'2026-02-15'}]},
+  {contact_id:9,prenom:'Nicolas',nom:'Colle',tel:'+33663381214',email:'colle.nicolas@gmail.com',ville:'Marseille',regime:'Pas de régime',contrat:'Auto-entrepreneur',carte_sncf:'Avantage Week-end',vehicule:false,local:false,tags:[{name:'Lumière',level:5}],rate_a:320,rate_b:480,
+    assignments:[{event_id:'pa',team:'Technique Scène',role:'Superviseur Light',status:'confirmed',transport_aller:'Marseille St-Charles > Paris Gare de Lyon',transport_aller_date:'06/03/2026',transport_retour:'Paris Gare de Lyon > Marseille',transport_retour_date:'18/03/2026',hebergement:'Hotel Holiday Inn',chambre_pref:'',autonome_transport:false,autonome_hebergement:false,ml1_sent:'2026-01-18',ml1_done:'2026-01-20',ml2_sent:'2026-02-14',ml2_done:'2026-02-18'}]},
+  {contact_id:10,prenom:'Grégoire',nom:'Germain',tel:'',email:'greg@agence-episode.fr',ville:'Paris',regime:'Pas de régime',contrat:'Auto-entrepreneur',vehicule:true,local:true,tags:[{name:'Photographe',level:4},{name:'Vidéaste',level:3}],rate_a:400,rate_b:550,
+    assignments:[{event_id:'pa',team:'Communication',role:'Dir. Communication',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true,ml1_sent:'2026-01-20',ml1_done:'2026-01-22',ml2_sent:'2026-02-20',ml2_done:'2026-02-25'}]},
+  {contact_id:11,prenom:'Hippolyte',nom:'Court',tel:'+33695088738',email:'hippolyte@agence-episode.fr',ville:'Paris',regime:'Pas de régime',contrat:'Auto-entrepreneur',vehicule:false,local:true,tags:[],rate_a:0,rate_b:0,
+    assignments:[{event_id:'pa',team:'Artistique',role:'Resp. Prod/Log Artistique',status:'invited',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true,ml1_sent:null,ml1_done:null,ml2_sent:null,ml2_done:null}]},
+  {contact_id:12,prenom:'Gilles',nom:'Chanu',tel:'+33689734582',email:'gilleschanu@icloud.com',ville:'Villepinte',regime:'Pas de régime',contrat:'Intermittent',vehicule:true,local:true,tags:[{name:'Électricien',level:5}],rate_a:300,rate_b:420,
+    assignments:[{event_id:'pa',team:'Technique Site',role:'Chef Électro',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true,ml1_sent:'2026-01-14',ml1_done:'2026-01-15',ml2_sent:'2026-02-10',ml2_done:'2026-02-12'}]},
+  {contact_id:13,prenom:'Miad',nom:'Bensalem',tel:'+33672904111',email:'miad.bar@gmail.com',ville:'Paris',regime:'Halal',contrat:'Auto-entrepreneur',vehicule:false,local:true,tags:[{name:'Barman',level:3}],rate_a:150,rate_b:200,
+    assignments:[{event_id:'pa',team:'Production',role:'Chef de Bar',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true,ml1_sent:'2026-02-01',ml1_done:'2026-02-03',ml2_sent:'2026-02-20',ml2_done:'2026-02-22'}]},
+  {contact_id:14,prenom:'Coline',nom:'Vasseur',tel:'+33645123890',email:'coline.vasseur@live.fr',ville:'Lille',regime:'Végétarien',contrat:'Intermittent',carte_sncf:'Avantage Jeune',vehicule:false,local:false,tags:[],rate_a:250,rate_b:400,
+    assignments:[{event_id:'pa',team:'Performeur',role:'Chorégraphe / Performeuse',status:'confirmed',transport_aller:'Lille Flandres > Paris Nord',transport_aller_date:'12/03/2026',transport_retour:'Paris Nord > Lille',transport_retour_date:'15/03/2026',hebergement:'Hotel Holiday Inn',chambre_pref:'',autonome_transport:false,autonome_hebergement:false,ml1_sent:'2026-02-05',ml1_done:'2026-02-08',ml2_sent:'2026-02-25',ml2_done:'2026-03-01'}]},
+  {contact_id:15,prenom:'Margaux',nom:'Delattre',tel:'+33678451209',email:'margaux.delattre@outlook.com',ville:'Paris',regime:'Sans gluten',contrat:'CDD',carte_sncf:'Liberté',vehicule:true,local:true,tags:[],rate_a:0,rate_b:0,
+    assignments:[{event_id:'pa',team:'Partenariat',role:'Resp. Partenariats',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true,ml1_sent:'2026-01-10',ml1_done:'2026-01-11',ml2_sent:'2026-02-05',ml2_done:'2026-02-07'}]},
+  {contact_id:16,prenom:'Alexandre',nom:'Morel',tel:'+33690127453',email:'alex.morel@gmail.com',ville:'Strasbourg',regime:'Pas de régime',contrat:'Auto-entrepreneur',vehicule:false,local:false,tags:[{name:'Photographe',level:4}],rate_a:300,rate_b:450,
+    assignments:[{event_id:'pa',team:'Artistique',role:'Directeur Artistique',status:'confirmed',transport_aller:'Strasbourg > Paris Est',transport_aller_date:'07/03/2026',transport_retour:'Paris Est > Strasbourg',transport_retour_date:'18/03/2026',hebergement:'Hotel Holiday Inn',chambre_pref:'',autonome_transport:false,autonome_hebergement:false,ml1_sent:'2026-01-22',ml1_done:'2026-01-25',ml2_sent:'2026-02-18',ml2_done:null}]},
+  {contact_id:17,prenom:'Lola',nom:'Garnier',tel:'+33654789012',email:'lola.garnier@agence-episode.fr',ville:'Paris',regime:'Vegan',contrat:'CDD',vehicule:false,local:true,tags:[{name:'Vidéaste',level:4},{name:'Photographe',level:3}],rate_a:0,rate_b:0,
+    assignments:[{event_id:'pa',team:'Communication',role:'Vidéaste / Photographe',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true,ml1_sent:'2026-01-20',ml1_done:'2026-01-21',ml2_sent:'2026-02-20',ml2_done:'2026-02-23'}]},
+  {contact_id:18,prenom:'Julien',nom:'Petit',tel:'+33601234567',email:'julien.petit@gmail.com',ville:'Rennes',regime:'Pas de régime',contrat:'Prestataire externe',vehicule:true,local:false,tags:[{name:'Son',level:4}],rate_a:350,rate_b:500,
+    assignments:[{event_id:'pa',team:'Prestataire Externe',role:'Ingénieur Son FOH',status:'confirmed',transport_aller:'Rennes > Paris Montparnasse',transport_aller_date:'07/03/2026',transport_retour:'Paris Montparnasse > Rennes',transport_retour_date:'18/03/2026',hebergement:'Hotel Holiday Inn',chambre_pref:'',autonome_transport:false,autonome_hebergement:false,ml1_sent:'2026-02-01',ml1_done:'2026-02-04',ml2_sent:'2026-02-22',ml2_done:'2026-02-26'}]},
+  {contact_id:19,prenom:'Amira',nom:'Benali',tel:'+33678901234',email:'amira.b@live.fr',ville:'Lyon',regime:'Halal',contrat:'Bénévole',carte_sncf:'Avantage Jeune',vehicule:false,local:false,tags:[{name:'Runner',level:1}],rate_a:0,rate_b:0,
+    assignments:[{event_id:'pa',team:'Hybride',role:'Runner Général',status:'invited',transport_aller:'Lyon Part-Dieu > Paris',transport_aller_date:'12/03/2026',transport_retour:'Paris > Lyon',transport_retour_date:'15/03/2026',hebergement:'',chambre_pref:'',autonome_transport:false,autonome_hebergement:false,ml1_sent:null,ml1_done:null,ml2_sent:null,ml2_done:null}]},
+  {contact_id:20,prenom:'Thomas',nom:'Durand',tel:'+33687654321',email:'thomas.durand@outlook.fr',ville:'Villepinte',regime:'Pas de régime',contrat:'Intermittent',vehicule:true,local:true,tags:[{name:'Électricien',level:3},{name:'Chauffeur',level:2}],rate_a:250,rate_b:350,
+    assignments:[{event_id:'pa',team:'Technique Site',role:'Électricien',status:'confirmed',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:true,autonome_hebergement:true,ml1_sent:'2026-01-28',ml1_done:'2026-01-30',ml2_sent:'2026-02-15',ml2_done:'2026-02-17'}]},
+];
+
+/* Vacant slots */
+const VACANTS={
+  pa:[{team:'Communication',role:'Community Manager',budget:'200–300 €/jour',suggestion:{name:'Julie Dubois',ini:'JD',ville:'Paris',local:true,rate:200,stars:3,reason:'CM sur PA25, locale, profil complet'}}]
+};
+
+/* ═══ STATE ═══ */
+let activeEvent='pa';
+let sid=null;
+
+/* ═══ HELPERS ═══ */
+const svgPhone='<svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>';
+const svgWA='<svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>';
+const svgMail='<svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>';
+
+function actionBtns(c){
+  return `<div class="q-actions">
+    <div class="q-btn" title="Appeler" onclick="event.stopPropagation();window.open('tel:${c.tel}')">${svgPhone}</div>
+    <div class="q-btn wa" title="WhatsApp" onclick="event.stopPropagation();window.open('https://wa.me/${(c.tel||'').replace(/[^0-9]/g,'')}')">${svgWA}</div>
+    <div class="q-btn" title="Email" onclick="event.stopPropagation();window.open('mailto:${c.email}')">${svgMail}</div>
+    ${mlPill(c)}
+  </div>`;
 }
 
-function setView(mode,el){viewMode=mode;document.querySelectorAll('.vt-btn').forEach(b=>b.classList.remove('on'));el.classList.add('on');if(mode==='pole'){document.getElementById('tf').value=poleLock;document.getElementById('tf').disabled=true}else{document.getElementById('tf').value='';document.getElementById('tf').disabled=false}filt();buildCoordPanel()}
+function mlPill(c){
+  const a=c.assignments.find(x=>x.event_id===activeEvent);
+  if(!a) return '';
+  if(a.ml2_done) return '<span class="ml-pill ml-done">ML ✓</span>';
+  if(a.ml2_sent) return '<span class="ml-pill ml-wait">ML ⏳</span>';
+  return '<span class="ml-pill ml-send" onclick="event.stopPropagation()">Envoyer ML</span>';
+}
 
-function updateStats(){
-  if(!activeEvent)return;const bar=document.getElementById('statsBar');
+function statusTag(s){
+  if(s==='confirmed') return '<span class="tag t-confirmed">Confirmé</span>';
+  if(s==='invited') return '<span class="tag t-invited">Invité</span>';
+  if(s==='cancelled') return '<span class="tag t-cancelled">Annulé</span>';
+  return '';
+}
+
+/* ═══ EVENT SWITCHER ═══ */
+function swEv(evId,el){
+  document.querySelectorAll('.rail-ev-wrap').forEach(w=>w.classList.remove('on'));
+  if(el) el.classList.add('on');
+  activeEvent=evId;sid=null;
+  const ev=EVENTS[evId];
+  document.getElementById('evCtx').textContent=ev?ev.name:'';
+  buildRoster();buildMetrics();buildCoord();
+  document.getElementById('rDetail').style.display='none';
+  document.getElementById('rCoord').style.display='';
+}
+
+/* ═══ METRICS ═══ */
+function buildMetrics(){
   const assigned=D.filter(c=>c.assignments.some(a=>a.event_id===activeEvent));
   const confirmed=assigned.filter(c=>{const a=c.assignments.find(x=>x.event_id===activeEvent);return a&&a.status==='confirmed'});
-  const pending=assigned.filter(c=>{const a=c.assignments.find(x=>x.event_id===activeEvent);return a&&a.status==='invited'});
-  const logOk=assigned.filter(c=>{const a=c.assignments.find(x=>x.event_id===activeEvent);if(!a)return false;const ht=a.autonome_transport||(a.transport_aller&&a.transport_retour);const hh=a.autonome_hebergement||a.hebergement||c.local;return ht&&hh});
-  bar.innerHTML=`<div class="stat-card"><div class="stat-icon" style="background:rgba(88,101,242,.14)"><svg style="stroke:var(--blue)" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><div><div class="stat-value">${assigned.length}</div><div class="stat-label">Assignés</div></div></div><div class="stat-card"><div class="stat-icon" style="background:rgba(59,165,93,.14)"><svg style="stroke:var(--green)" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div><div><div class="stat-value">${confirmed.length}</div><div class="stat-label">Confirmés</div></div></div><div class="stat-card"><div class="stat-icon" style="background:rgba(245,166,35,.14)"><svg style="stroke:var(--amber)" viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg></div><div><div class="stat-value">${pending.length}</div><div class="stat-label">En attente</div></div></div><div class="stat-card"><div class="stat-icon" style="background:rgba(155,89,182,.14)"><svg style="stroke:var(--purple)" viewBox="0 0 24 24"><path d="M9 17H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg></div><div><div class="stat-value">${logOk.length}</div><div class="stat-label">Logistique OK</div></div></div>`;
+  let totalBudget=0;let logCost=0;let trainCount=0;let hotelCount=0;
+  assigned.forEach(c=>{const a=c.assignments.find(x=>x.event_id===activeEvent);if(!a)return;totalBudget+=(c.rate_a||0)+(c.rate_b||0);if(!c.local&&a.transport_aller)trainCount++;if(!c.local&&a.hebergement)hotelCount++});
+  logCost=trainCount*160+hotelCount*800;
+  document.getElementById('metricsBar').innerHTML=`
+    <div class="metric"><div class="metric-icon" style="background:rgba(88,101,242,.14)"><svg style="stroke:var(--blue)" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div><div class="metric-val">${assigned.length}</div><div class="metric-label">Assignés</div></div></div>
+    <div class="metric"><div class="metric-icon" style="background:rgba(59,165,93,.14)"><svg style="stroke:var(--green)" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div><div><div class="metric-val">${confirmed.length}</div><div class="metric-label">Confirmés</div></div></div>
+    <div class="metric"><div class="metric-icon" style="background:rgba(245,166,35,.14)"><svg style="stroke:var(--amber)" viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div><div class="metric-val">${totalBudget.toLocaleString('fr')} €</div><div class="metric-label">Budget staff</div></div></div>
+    <div class="metric"><div class="metric-icon" style="background:rgba(155,89,182,.14)"><svg style="stroke:var(--purple)" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><div class="metric-val">~${logCost.toLocaleString('fr')} €</div><div class="metric-label">${trainCount} trains · ${hotelCount} hôtels</div></div></div>`;
+  document.getElementById('pgCount').textContent=assigned.length;
 }
 
-function buildTableHeader(){
-  if(!activeEvent)return;const ev=EVENTS[activeEvent];if(!ev)return;
-  let h1=`<tr><th rowspan="2" onclick="srt('nom')">Nom</th><th rowspan="2" onclick="srt('equipe')">Équipe</th><th rowspan="2" onclick="srt('role')">Rôle</th><th rowspan="2" onclick="srt('status')">Statut</th>`;
-  let h2='<tr>';
-  ev.phases.forEach(p=>{h1+=`<th class="phase-hd ${p.cls}" colspan="${p.days.length}">${p.name}</th>`;p.days.forEach(d=>{const parts=d.split('\n');h2+=`<th class="day-hd">${parts[0]}${parts[1]?'<br><span style="opacity:.5">'+parts[1]+'</span>':''}</th>`})});
-  h1+=`<th rowspan="2">Trans.</th><th rowspan="2">Héb.</th><th rowspan="2">Log.</th></tr>`;h2+='</tr>';
-  document.getElementById('thead').innerHTML=h1+h2;
+/* ═══ ROSTER ═══ */
+function buildRoster(){
+  const wrap=document.getElementById('rosterWrap');
+  const assigned=D.filter(c=>c.assignments.some(a=>a.event_id===activeEvent));
+
+  // Group by team
+  const teams={};
+  assigned.forEach(c=>{const a=c.assignments.find(x=>x.event_id===activeEvent);if(!a)return;if(!teams[a.team])teams[a.team]=[];teams[a.team].push({contact:c,assignment:a})});
+
+  let html='';
+  const poleOrder=Object.keys(POLES);
+  // Add teams that have staff but no defined pole leader
+  Object.keys(teams).forEach(t=>{if(!poleOrder.includes(t))poleOrder.push(t)});
+
+  poleOrder.forEach(team=>{
+    const tc=TC[team]||{bg:'rgba(255,255,255,.08)',c:'var(--c3)'};
+    const pole=POLES[team];
+    const members=teams[team]||[];
+    if(!members.length && !pole) return;
+
+    html+=`<div class="section-label"><span class="t-team" style="background:${tc.bg};color:${tc.c}">${team}</span> ${members.length} staff</div>`;
+
+    // Leader card (pinned at top, no stars)
+    if(pole){
+      const leader=members.find(m=>m.contact.contact_id===pole.leader_id);
+      if(leader){
+        const c=leader.contact;const a=leader.assignment;
+        html+=`<div class="leader-card${sid===c.contact_id?' sel':''}" onclick="openDetail(${c.contact_id})">
+          <div class="av av-lg" style="background:${grd(c.contact_id)}">${ini(c.prenom,c.nom)}</div>
+          <div class="person-info">
+            <div class="person-name">${c.prenom} ${c.nom} <span class="leader-star">★</span></div>
+            <div class="person-role">${pole.title}</div>
+            <div class="person-tags">${statusTag(a.status)}${c.local?'<span class="tag t-local">Local</span>':'<span class="tag t-cost">'+c.ville+'</span>'}${c.vehicule?'<span class="tag t-vehicle">Véhiculé</span>':''}${c.rate_a?'<span class="tag t-cost">'+c.rate_a+' / '+c.rate_b+' €</span>':''}</div>
+          </div>
+          ${actionBtns(c)}
+        </div>`;
+      }
+    }
+
+    // Staff cards (with stars)
+    members.forEach(({contact:c,assignment:a})=>{
+      if(pole && c.contact_id===pole.leader_id) return; // skip leader
+      const avgSkill=c.tags.length?Math.round(c.tags.reduce((s,t)=>s+t.level,0)/c.tags.length):0;
+      html+=`<div class="slot${sid===c.contact_id?' sel':''}${a.status==='invited'?' needs':''}" onclick="openDetail(${c.contact_id})">
+        <div class="av av-md" style="background:${grd(c.contact_id)}">${ini(c.prenom,c.nom)}</div>
+        <div class="person-info">
+          <div class="person-name">${c.prenom} ${c.nom}${avgSkill?'<span class="stars">'+starsHtml(avgSkill)+'</span>':''}</div>
+          <div class="person-role">${a.role}</div>
+          <div class="person-tags">${statusTag(a.status)}${c.local?'<span class="tag t-local">Local</span>':'<span class="tag t-cost">'+c.ville+'</span>'}${c.rate_a?'<span class="tag t-cost">'+c.rate_a+'/'+c.rate_b+'</span>':''}</div>
+        </div>
+        ${actionBtns(c)}
+      </div>`;
+    });
+
+    // Vacant slots for this team
+    const vacants=(VACANTS[activeEvent]||[]).filter(v=>v.team===team);
+    vacants.forEach(v=>{
+      html+=`<div class="vacant" onclick="openModal()">
+        <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+        <div class="vacant-info"><strong>${v.role}</strong><br><span style="font-size:var(--fs-sm)">Budget prévu : ${v.budget}</span></div>
+        <button class="vacant-btn">Chercher</button>
+      </div>`;
+      if(v.suggestion){
+        const s=v.suggestion;
+        html+=`<div class="suggest">
+          <div class="av av-sm" style="background:${grd(99)}">${s.ini}</div>
+          <div class="suggest-text"><strong>${s.name}</strong> — ${s.reason}<div class="suggest-why">${s.local?'Locale':''}${s.local?' · ':''}${s.rate} €/jour · <span class="stars">${starsHtml(s.stars)}</span></div></div>
+          <button class="suggest-add">+ Ajouter</button>
+        </div>`;
+      }
+    });
+  });
+
+  // Teams with no pole leader defined (Performeur, Prestataire Externe, Hybride)
+  ['Performeur','Prestataire Externe','Hybride'].forEach(team=>{
+    if(teams[team] && !poleOrder.includes(team)){
+      // Already handled above
+    }
+  });
+
+  wrap.innerHTML=html;
 }
 
-function render(data){
-  if(!activeEvent)return;const ev=EVENTS[activeEvent];const b=document.getElementById('tb');
-  b.innerHTML=data.map(c=>{const a=c.assignments.find(x=>x.event_id===activeEvent);if(!a)return'';const tc=TC[a.team]||{bg:'rgba(255,255,255,.08)',c:'var(--c3)'};
-    let dots='',dayIdx=0;
-    ev.phases.forEach(p=>{p.days.forEach(()=>{const k=presKey(c.contact_id,activeEvent,dayIdx);const on=PRESENCE[k];dots+=`<td class="day-cell"><span class="dot ${on?'present':'empty'}" onclick="event.stopPropagation();togglePres(${c.contact_id},'${activeEvent}',${dayIdx},this)"></span></td>`;dayIdx++})});
-    const hasT=a.autonome_transport||(a.transport_aller&&a.transport_retour);const tH=hasT?(a.autonome_transport?'<span class="mini-ok">Auto</span>':'<span class="mini-ok">✓ A/R</span>'):'<span class="mini-warn">⚠</span>';
-    const hasH=a.autonome_hebergement||a.hebergement||c.local;const hH=hasH?(c.local?'<span class="mini-ok">Local</span>':(a.autonome_hebergement?'<span class="mini-ok">Auto</span>':`<span class="mini-ok">${a.hebergement?'✓':'⚠'}</span>`)):'<span class="mini-warn">⚠</span>';
-    let ls=0,lt=3;if(hasT)ls++;if(hasH)ls++;let pc=0,pt=0,di=0;ev.phases.forEach(p=>p.days.forEach(()=>{pt++;if(PRESENCE[presKey(c.contact_id,activeEvent,di)])pc++;di++}));if(pt>0&&pc/pt>.5)ls++;const lp=Math.round(ls/lt*100);const lc=lp>=80?'var(--green)':lp>=50?'var(--amber)':'var(--red)';
-    return`<tr class="${c.contact_id===sid?'sel':''}" onclick="openDetail(${c.contact_id})"><td><div class="td-name">${hx(c.contact_id,c.prenom,c.nom)}<div class="nb"><div class="fn">${c.prenom} ${c.nom}</div><span class="em">${c.ville||''}</span></div></div></td><td><span class="tbg" style="background:${tc.bg};color:${tc.c}">${a.team}</span></td><td style="color:var(--c2);font-size:var(--ct-xs)">${a.role}</td><td><span class="asb ${statusCls[a.status]||''}">${statusLabel[a.status]||a.status}</span></td>${dots}<td>${tH}</td><td>${hH}</td><td><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--c3)">${lp}%</span><div class="log-bar"><div class="log-fill" style="width:${lp}%;background:${lc}"></div></div></td></tr>`}).join('');
-  document.getElementById('fc').textContent=data.length+' assignation'+(data.length!==1?'s':'');document.getElementById('pgCount').textContent=data.length;
-}
-
-function filt(){
-  if(!activeEvent)return;const q=document.getElementById('si').value.toLowerCase();const tm=document.getElementById('tf').value;const st=document.getElementById('asf').value;
-  let f=D.filter(c=>c.assignments.some(a=>a.event_id===activeEvent));
-  if(viewMode==='pole')f=f.filter(c=>c.assignments.some(a=>a.event_id===activeEvent&&a.team===poleLock));
-  f=f.filter(c=>{const a=c.assignments.find(x=>x.event_id===activeEvent);if(!a)return false;const mq=!q||`${c.prenom} ${c.nom} ${c.email} ${c.ville} ${a.team} ${a.role}`.toLowerCase().includes(q);const mt=!tm||a.team===tm;const ms=!st||a.status===st;return mq&&mt&&ms});
-  render(f);
-}
-
-function srt(col){if(sortCol===col)sortDir*=-1;else{sortCol=col;sortDir=1}D.sort((a,b)=>{const aa=a.assignments.find(x=>x.event_id===activeEvent);const ba=b.assignments.find(x=>x.event_id===activeEvent);let x,y;if(col==='nom'){x=a.nom;y=b.nom}else if(col==='equipe'){x=aa?.team||'';y=ba?.team||''}else if(col==='role'){x=aa?.role||'';y=ba?.role||''}else if(col==='status'){x=aa?.status||'';y=ba?.status||''}else return 0;x=x.toLowerCase();y=y.toLowerCase();return x<y?-sortDir:x>y?sortDir:0});filt()}
-
-function togglePres(cid,evId,dayIdx,el){const k=presKey(cid,evId,dayIdx);PRESENCE[k]=!PRESENCE[k];el.className='dot '+(PRESENCE[k]?'present':'empty')}
-
-function buildCoordPanel(){
-  const panel=document.getElementById('coordPanel');
-  if(!activeEvent){panel.innerHTML='<div class="coord-section"><p style="color:var(--c3);font-size:var(--ct-xs);text-align:center;padding:20px">Sélectionnez un événement</p></div>';return}
-  const deadlines=DEADLINES[activeEvent]||{};const notes=COORD_NOTES[activeEvent]||[];const today=new Date('2026-03-14');
-  let pH='';Object.keys(deadlines).forEach(team=>{const dl=deadlines[team];const assigned=D.filter(c=>c.assignments.some(a=>a.event_id===activeEvent&&a.team===team));const confirmed=assigned.filter(c=>{const a=c.assignments.find(x=>x.event_id===activeEvent&&x.team===team);return a&&a.status==='confirmed'});const pct=assigned.length?Math.round(confirmed.length/assigned.length*100):0;const tc=TC[team]||{bg:'rgba(255,255,255,.08)',c:'var(--c3)'};const dlD=new Date(dl.deadline);const dL=Math.ceil((dlD-today)/(864e5));let dc='ok',di='';if(dL<0){dc='overdue';di='⚠ '}else if(dL<=7){dc='soon';di='⏰ '}const ds=dl.deadline.split('-').reverse().join('/');
-    pH+=`<div class="pole-row"><span class="pole-badge" style="background:${tc.bg};color:${tc.c}">${team.length>14?team.slice(0,12)+'…':team}</span><div class="pole-progress"><div class="pole-bar"><div class="pole-fill" style="width:${pct}%;background:${pct>=80?'var(--green)':pct>=50?'var(--amber)':'var(--red)'}"></div></div><div class="pole-stat"><span>${confirmed.length}/${assigned.length} confirmés</span><span class="pole-deadline ${dc}">${di}${ds}</span></div></div></div>`});
-  let aH='';Object.keys(deadlines).forEach(team=>{const dl=deadlines[team];const dlD=new Date(dl.deadline);const dL=Math.ceil((dlD-today)/(864e5));if(dL<0)aH+=`<div class="alert-item"><div class="alert-dot" style="background:var(--red)"></div><div><div class="alert-text"><strong>${team}</strong> — échéance dépassée de ${Math.abs(dL)}j</div><div class="alert-time">Leader: ${dl.leader}</div></div></div>`;const pending=D.filter(c=>{const a=c.assignments.find(x=>x.event_id===activeEvent&&x.team===team);return a&&a.status==='invited'});if(pending.length)aH+=`<div class="alert-item"><div class="alert-dot" style="background:var(--amber)"></div><div><div class="alert-text"><strong>${team}</strong> — ${pending.length} invitation${pending.length>1?'s':''} en attente</div><div class="alert-time">${pending.map(c=>c.prenom+' '+c.nom).join(', ')}</div></div></div>`});
-  const mL=D.filter(c=>{const a=c.assignments.find(x=>x.event_id===activeEvent);if(!a||a.status!=='confirmed')return false;const ht=a.autonome_transport||(a.transport_aller&&a.transport_retour);const hh=a.autonome_hebergement||a.hebergement||c.local;return!ht||!hh});
-  if(mL.length)aH+=`<div class="alert-item"><div class="alert-dot" style="background:var(--purple)"></div><div><div class="alert-text">${mL.length} confirmé${mL.length>1?'s':''} sans logistique complète</div><div class="alert-time">${mL.slice(0,3).map(c=>c.prenom).join(', ')}${mL.length>3?'…':''}</div></div></div>`;
-  let nH=notes.map(n=>`<div class="coord-note">${n.text}<div class="coord-note-author">${n.author} · ${n.date}</div></div>`).join('');
-  panel.innerHTML=`<div class="coord-section"><div class="coord-label">Progression par pôle</div>${pH}</div><div class="coord-section"><div class="coord-label">Alertes</div>${aH||'<p style="color:var(--c3);font-size:var(--ct-xs)">Aucune alerte</p>'}</div><div class="coord-section"><div class="coord-label">Notes coordinateur</div>${nH||''}<textarea placeholder="Ajouter une note…" style="width:100%;padding:8px 10px;border:1px solid var(--c4);border-radius:6px;background:var(--frame-input);font-family:Outfit,sans-serif;font-size:var(--ct-xs);color:var(--c1);outline:none;min-height:40px;resize:vertical;margin-top:8px"></textarea></div>`;
-}
-
+/* ═══ DETAIL PANEL ═══ */
 function openDetail(cid){
-  const c=D.find(x=>x.contact_id===cid);if(!c||!activeEvent)return;const a=c.assignments.find(x=>x.event_id===activeEvent);if(!a)return;sid=cid;filt();
-  document.getElementById('rCoord').style.display='none';const rd=document.getElementById('rDetail');rd.style.display='flex';rd.style.flexDirection='column';rd.style.height='100%';document.getElementById('right').classList.remove('shut');
+  const c=D.find(x=>x.contact_id===cid);
+  if(!c) return;
+  const a=c.assignments.find(x=>x.event_id===activeEvent);
+  if(!a) return;
+  sid=cid;buildRoster();
   const tc=TC[a.team]||{bg:'rgba(255,255,255,.08)',c:'var(--c3)'};
-  document.getElementById('rpA').style.background=grd(cid);document.getElementById('rpA').textContent=ini(c.prenom,c.nom);
-  document.getElementById('rpN').textContent=c.prenom+' '+c.nom;document.getElementById('rpT').textContent=c.prenom+' '+c.nom;
-  document.getElementById('rpM').innerHTML=`<span class="tbg" style="background:${tc.bg};color:${tc.c}">${a.team}</span><span style="opacity:.4">·</span><span style="font-size:var(--ct-xs)">${a.role}</span>${c.vehicule?'<span style="opacity:.4">·</span><span style="font-size:var(--ct-xs)">🚗</span>':''}${c.local?'<span style="opacity:.4">·</span><span style="font-size:var(--ct-xs)">📍 Local</span>':''}`;
-  const tabs=[{id:'as',label:'Assignation'},{id:'pr',label:'Présence'},{id:'tr',label:'Transport'},{id:'hb',label:'Hébergement'},{id:'pf',label:'Profil'}];
-  document.getElementById('rpTabs').innerHTML=tabs.map((t,i)=>`<div class="rp-tab${i===0?' active':''}" onclick="rpSw('${t.id}',this)">${t.label}</div>`).join('');
-  const teams=['Production','Technique Scène','Technique Site','Aménagement','Artistique','Communication','Scénographie','Performeur','Prestataire Externe','Partenariat','Hybride'];
-  const ev=EVENTS[activeEvent];
-  // Assignation panel
-  let html=`<div class="rp-panel active" id="rp-as"><div class="fs"><div class="fs-t">${ev?.name||activeEvent}</div><div class="fg"><div class="f"><label>Statut</label><select><option${a.status==='invited'?' selected':''}>Invité</option><option${a.status==='confirmed'?' selected':''}>Confirmé</option><option${a.status==='cancelled'?' selected':''}>Annulé</option></select></div><div class="f"><label>Contrat</label><input value="${c.contrat_type||''}" disabled></div><div class="f"><label>Équipe</label><select>${teams.map(t=>`<option${t===a.team?' selected':''}>${t}</option>`).join('')}</select></div><div class="f"><label>Rôle / Poste</label><input value="${a.role}" placeholder="Rôle"></div></div></div><div class="fs"><div class="fs-t">Rémunération événement</div><div class="fg"><div class="f"><label>Taux A (montage)</label><input type="number" value="" placeholder="Défaut contact"></div><div class="f"><label>Taux B (exploit.)</label><input type="number" value="" placeholder="Défaut contact"></div><div class="f f2"><label>Note</label><input value="" placeholder="Override ou note spécifique…"></div></div></div><div class="fs"><div class="fs-t">Notes assignation</div><textarea style="width:100%;padding:8px 10px;border:1px solid var(--c4);border-radius:6px;background:var(--frame-input);font-family:Outfit,sans-serif;font-size:var(--ct-sm);color:var(--c1);outline:none;min-height:50px;resize:vertical" placeholder="Notes internes…"></textarea></div></div>`;
-  // Présence panel
-  html+='<div class="rp-panel" id="rp-pr">';let dayIdx=0;const slots=['PDJ','MTG','EXP','DMT'];
-  ev.phases.forEach(p=>{html+=`<div class="pres-phase ${p.cls}">${p.name}</div>`;p.days.forEach(d=>{const label=d.split('\n')[0];const on=PRESENCE[presKey(cid,activeEvent,dayIdx)];html+=`<div class="pres-day"><div class="pres-day-label">${label}</div><div class="pres-slots">${slots.map(s=>`<div class="pres-slot${on?' on':''}">${s}</div>`).join('')}</div></div>`;dayIdx++})});
-  html+='<p style="font-size:10px;color:var(--c3);margin-top:12px;opacity:.6">PDJ=petit-déjeuner · MTG=montage · EXP=exploitation · DMT=démontage</p></div>';
-  // Transport panel
-  const ap=(a.transport_aller||'').split('>').map(s=>s.trim());const rp=(a.transport_retour||'').split('>').map(s=>s.trim());
-  html+=`<div class="rp-panel" id="rp-tr"><div class="fs"><div class="fs-t">Transport Aller</div><div class="fg"><div class="f"><label>Autonome</label><select><option${a.autonome_transport?' selected':''}>Oui</option><option${!a.autonome_transport?' selected':''}>Non</option></select></div><div class="f"><label>Véhiculé</label><input value="${c.vehicule?'Oui':'Non'}" disabled></div><div class="f"><label>Départ</label><input value="${ap[0]||''}" placeholder="Ville"></div><div class="f"><label>Arrivée</label><input value="${ap[1]||''}" placeholder="Ville"></div><div class="f"><label>Date</label><input value="${a.transport_aller_date||''}" placeholder="JJ/MM/AAAA"></div><div class="f"><label>Carte SNCF</label><input value="${c.carte_sncf||'—'}" disabled></div></div></div><div class="fs"><div class="fs-t">Transport Retour</div><div class="fg"><div class="f"><label>Départ</label><input value="${rp[0]||''}" placeholder="Ville"></div><div class="f"><label>Arrivée</label><input value="${rp[1]||''}" placeholder="Ville"></div><div class="f"><label>Date</label><input value="${a.transport_retour_date||''}" placeholder="JJ/MM/AAAA"></div><div class="f"><label></label></div></div></div></div>`;
-  // Hébergement panel
-  html+=`<div class="rp-panel" id="rp-hb"><div class="fs"><div class="fs-t">Hébergement</div><div class="fg"><div class="f"><label>Autonome</label><select><option${a.autonome_hebergement?' selected':''}>Oui</option><option${!a.autonome_hebergement?' selected':''}>Non</option></select></div><div class="f"><label>Local</label><input value="${c.local?'Oui':'Non'}" disabled></div><div class="f f2"><label>Hôtel / Logement</label><input value="${a.hebergement||''}" placeholder="Nom hôtel…"></div><div class="f f2"><label>Chambre commune</label><input value="${a.chambre_pref||''}" placeholder="Préférence…"></div></div></div><div class="fs"><div class="fs-t">Régime alimentaire</div><div class="f"><input value="${c.regime_alimentaire||''}" disabled></div></div></div>`;
-  // Profil panel
-  html+=`<div class="rp-panel" id="rp-pf"><div class="fs"><div class="fs-t">Profil contact (lecture seule)</div><div class="fg"><div class="f"><label>Prénom</label><input value="${c.prenom}" disabled></div><div class="f"><label>Nom</label><input value="${c.nom}" disabled></div><div class="f"><label>Tél</label><input value="${c.tel||''}" disabled></div><div class="f"><label>Email</label><input value="${c.email||''}" disabled></div><div class="f"><label>Ville</label><input value="${c.ville||''}" disabled></div><div class="f"><label>Contrat</label><input value="${c.contrat_type||''}" disabled></div></div></div><div class="fs"><div class="fs-t">Compétences</div>${c.tags&&c.tags.length?c.tags.map(t=>`<div style="display:flex;align-items:center;gap:6px;padding:4px 0"><span style="font-size:var(--ct-sm);color:var(--c1)">${t.name}</span><span style="color:var(--amber);font-size:12px">${'★'.repeat(t.level)}</span><span style="color:var(--c4);font-size:12px">${'★'.repeat(5-t.level)}</span></div>`).join(''):'<p style="color:var(--c3);font-size:var(--ct-xs)">Aucune compétence</p>'}</div><p style="text-align:center;font-size:var(--ct-xs);margin-top:12px"><a href="contacts.html" style="color:var(--accent);text-decoration:none">Ouvrir dans Contacts →</a></p></div>`;
-  document.getElementById('rpBody').innerHTML=html;
+  const isLeader=Object.values(POLES).some(p=>p.leader_id===cid);
+
+  document.getElementById('rCoord').style.display='none';
+  const rd=document.getElementById('rDetail');rd.style.display='flex';rd.style.flexDirection='column';rd.style.height='100%';
+  document.getElementById('right').classList.remove('shut');
+
+  rd.innerHTML=`
+    <div class="rt-head"><div class="rt-title">${c.prenom} ${c.nom}</div><div class="rt-btns"><div class="tb-b" onclick="backToCoord()"><svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></div><div class="tb-b" onclick="closePanel()"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></div></div></div>
+    <div class="rp-pf">
+      <div class="av av-lg" style="background:${grd(cid)}">${ini(c.prenom,c.nom)}</div>
+      <div class="rp-info">
+        <div class="rp-name">${c.prenom} ${c.nom}${isLeader?' <span class="leader-star">★</span>':''}</div>
+        <div class="rp-meta"><span class="t-team" style="background:${tc.bg};color:${tc.c}">${a.team}</span><span style="opacity:.4">·</span><span>${a.role}</span>${c.local?'<span style="opacity:.4">·</span><span>Local</span>':''}${c.vehicule?'<span style="opacity:.4">·</span><span>Véhiculé</span>':''}</div>
+        <div class="rp-actions">
+          <div class="q-btn" onclick="window.open('tel:${c.tel}')">${svgPhone}</div>
+          <div class="q-btn wa" onclick="window.open('https://wa.me/${(c.tel||'').replace(/[^0-9]/g,'')}')">${svgWA}</div>
+          <div class="q-btn" onclick="window.open('mailto:${c.email}')">${svgMail}</div>
+        </div>
+      </div>
+    </div>
+    <div class="rp-tabs" id="rpTabs">
+      <div class="rp-tab active" onclick="rpSw('assign',this)">Assign.</div>
+      <div class="rp-tab" onclick="rpSw('transport',this)">Transport</div>
+      <div class="rp-tab" onclick="rpSw('heberg',this)">Héberg.</div>
+      <div class="rp-tab" onclick="rpSw('comms',this)">Comms</div>
+      <div class="rp-tab" onclick="rpSw('profil',this)">Profil</div>
+    </div>
+    <div class="rp-body">
+      ${buildAssignTab(c,a)}
+      ${buildTransportTab(c,a)}
+      ${buildHebergTab(c,a)}
+      ${buildCommsTab(c,a)}
+      ${buildProfilTab(c,a,isLeader)}
+    </div>
+    <div class="rp-footer"><button class="btn-sm-d">Retirer du lineup</button><button class="btn-primary" onclick="closePanel()"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Enregistrer</button></div>`;
 }
 
-function rpSw(p,el){document.querySelectorAll('.rp-tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.rp-panel').forEach(x=>x.classList.remove('active'));if(el)el.classList.add('active');const panel=document.getElementById('rp-'+p);if(panel)panel.classList.add('active')}
-function backToCoord(){sid=null;document.getElementById('rCoord').style.display='';document.getElementById('rDetail').style.display='none';filt()}
-function closeDetail(){sid=null;document.getElementById('rCoord').style.display='';document.getElementById('rDetail').style.display='none';document.getElementById('right').classList.add('shut');filt()}
+function buildAssignTab(c,a){
+  const teams=Object.keys(TC);
+  return `<div class="rp-panel active" id="rp-assign">
+    <div class="fs"><div class="fs-t">Assignation</div><div class="fg">
+      <div class="f"><label>Statut</label><select><option${a.status==='invited'?' selected':''}>Invité</option><option${a.status==='confirmed'?' selected':''}>Confirmé</option><option${a.status==='cancelled'?' selected':''}>Annulé</option></select></div>
+      <div class="f"><label>Contrat</label><input value="${c.contrat||''}" disabled></div>
+      <div class="f"><label>Équipe</label><select>${teams.map(t=>`<option${t===a.team?' selected':''}>${t}</option>`).join('')}</select></div>
+      <div class="f"><label>Rôle / Poste</label><input value="${a.role}" placeholder="Rôle"></div>
+    </div></div>
+    <div class="fs"><div class="fs-t">Rémunération</div><div class="fg">
+      <div class="f"><label>Taux A (montage)</label><input type="number" value="${c.rate_a||''}" placeholder="€/jour"></div>
+      <div class="f"><label>Taux B (exploit.)</label><input type="number" value="${c.rate_b||''}" placeholder="€/jour"></div>
+    </div>
+    <div class="cost-box"><span class="cost-label">Estimation totale (11 jours)</span><span class="cost-val">~${((c.rate_a||0)*6+(c.rate_b||0)*5).toLocaleString('fr')} €</span></div>
+    </div>
+    <div class="fs"><div class="fs-t">Notes</div><textarea style="width:100%;padding:8px 10px;border:1px solid var(--c4);border-radius:6px;background:var(--frame-input);font-family:'Outfit',sans-serif;font-size:var(--ct-sm);color:var(--c1);outline:none;min-height:50px;resize:vertical" placeholder="Notes internes…"></textarea></div>
+  </div>`;
+}
 
-function openAddModal(){if(!activeEvent)return;document.getElementById('addModal').classList.add('show');document.getElementById('modalSearch').value='';filterModal();setTimeout(()=>document.getElementById('modalSearch').focus(),100)}
-function closeAddModal(){document.getElementById('addModal').classList.remove('show')}
-function filterModal(){const q=document.getElementById('modalSearch').value.toLowerCase();const list=document.getElementById('modalList');list.innerHTML=D.filter(c=>!q||`${c.prenom} ${c.nom} ${c.email} ${c.ville}`.toLowerCase().includes(q)).map(c=>{const ia=c.assignments.some(a=>a.event_id===activeEvent);return`<div class="modal-contact${ia?' assigned':''}" onclick="${ia?'':`assignContact(${c.contact_id})`}">${hx(c.contact_id,c.prenom,c.nom)}<div><div class="fn">${c.prenom} ${c.nom}</div><span class="em">${c.ville||''}${ia?' · Déjà assigné':''}</span></div></div>`}).join('')}
-function assignContact(cid){if(!activeEvent)return;const c=D.find(x=>x.contact_id===cid);if(!c||c.assignments.some(a=>a.event_id===activeEvent))return;c.assignments.push({event_id:activeEvent,team:'—',role:'—',status:'invited',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:false,autonome_hebergement:false});closeAddModal();updateStats();filt();buildCoordPanel();openDetail(cid)}
+function buildTransportTab(c,a){
+  const ap=(a.transport_aller||'').split('>').map(s=>s.trim());
+  const rp=(a.transport_retour||'').split('>').map(s=>s.trim());
+  return `<div class="rp-panel" id="rp-transport">
+    <div class="fs"><div class="fs-t">Transport aller</div><div class="fg">
+      <div class="f"><label>Mode</label><select><option${a.autonome_transport?' selected':''}>Autonome</option><option${!a.autonome_transport&&a.transport_aller?' selected':''}>Train SNCF</option><option>Covoiturage</option><option>Bus</option></select></div>
+      <div class="f"><label>Véhiculé</label><input value="${c.vehicule?'Oui':'Non'}" disabled></div>
+      <div class="f"><label>Départ</label><input value="${ap[0]||''}" placeholder="Ville départ"></div>
+      <div class="f"><label>Arrivée</label><input value="${ap[1]||''}" placeholder="Ville arrivée"></div>
+      <div class="f"><label>Date</label><input value="${a.transport_aller_date||''}" placeholder="JJ/MM/AAAA"></div>
+      <div class="f"><label>Carte SNCF</label><input value="${c.carte_sncf||'Aucune'}" disabled></div>
+    </div></div>
+    <div class="fs"><div class="fs-t">Transport retour</div><div class="fg">
+      <div class="f"><label>Départ</label><input value="${rp[0]||''}" placeholder="Ville départ"></div>
+      <div class="f"><label>Arrivée</label><input value="${rp[1]||''}" placeholder="Ville arrivée"></div>
+      <div class="f"><label>Date</label><input value="${a.transport_retour_date||''}" placeholder="JJ/MM/AAAA"></div>
+      <div class="f"><label>Heure souhaitée</label><input placeholder="Ex: après 14h"></div>
+    </div></div>
+    <div class="cost-box"><span class="cost-label">Estimation transport A/R</span><span class="cost-val">${c.local||a.autonome_transport?'0 €':'~160 €'}</span></div>
+    ${c.local?'<div style="font-size:var(--ct-xs);color:var(--green);margin-top:6px">Pas de frais transport (local·e)</div>':''}
+  </div>`;
+}
 
-buildCoordPanel();
-swEv('pa',document.querySelectorAll('.rail-ev-wrap')[0]);
+function buildHebergTab(c,a){
+  return `<div class="rp-panel" id="rp-heberg">
+    <div class="fs"><div class="fs-t">Hébergement</div><div class="fg">
+      <div class="f"><label>Mode</label><select><option${a.autonome_hebergement?' selected':''}>Autonome</option><option${a.hebergement?' selected':''}>Hôtel</option><option>Chambre commune</option></select></div>
+      <div class="f"><label>Local</label><input value="${c.local?'Oui':'Non'}" disabled></div>
+      <div class="f f2"><label>Hôtel / Logement</label><input value="${a.hebergement||''}" placeholder="Nom hôtel ou adresse…"></div>
+      <div class="f f2"><label>Chambre commune avec</label><input value="${a.chambre_pref||''}" placeholder="Préférence de chambre…"></div>
+    </div></div>
+    <div class="cost-box"><span class="cost-label">Estimation hébergement</span><span class="cost-val">${c.local||a.autonome_hebergement?'0 €':'~800 €'}</span></div>
+    ${c.local?'<div style="font-size:var(--ct-xs);color:var(--green);margin-top:6px">Pas de frais hébergement (local·e)</div>':''}
+    <div class="fs" style="margin-top:16px"><div class="fs-t">Régime alimentaire</div><input style="padding:8px 10px;border:1px solid var(--c4);border-radius:6px;background:var(--frame-input);font-size:var(--ct-sm);color:var(--c1);width:100%" value="${c.regime||''}" disabled></div>
+  </div>`;
+}
+
+function buildCommsTab(c,a){
+  const fmtDate=d=>d?d.split('-').reverse().join('/'):'';
+  let html=`<div class="rp-panel" id="rp-comms">
+    <div class="fs"><div class="fs-t">Magic links & communications</div>`;
+  // ML1
+  html+=`<div class="tl-item">
+    <div class="tl-dot" style="background:${a.ml1_done?'var(--green)':a.ml1_sent?'var(--amber)':'var(--c4)'}"></div>
+    <div class="tl-content">
+      <div class="tl-type">ML1 — Mise à jour profil</div>
+      <div class="tl-desc">Lien pour mettre à jour ses infos personnelles (adresse, tél, régime, carte SNCF).</div>
+      <div class="tl-date">${a.ml1_sent?'Envoyé '+fmtDate(a.ml1_sent):'Pas encore envoyé'}</div>
+    </div>
+    <div class="tl-right">
+      ${a.ml1_done?'<span class="tl-status tls-done">Complété '+fmtDate(a.ml1_done)+'</span>':a.ml1_sent?'<span class="tl-status tls-wait">En attente</span><button class="relance-btn">Relancer</button>':'<button class="send-btn">Envoyer ML1</button>'}
+    </div>
+  </div>`;
+  // ML2
+  html+=`<div class="tl-item">
+    <div class="tl-dot" style="background:${a.ml2_done?'var(--green)':a.ml2_sent?'var(--amber)':'var(--c4)'}"></div>
+    <div class="tl-content">
+      <div class="tl-type">ML2 — Confirmation ${EVENTS[activeEvent]?.short||''}</div>
+      <div class="tl-desc">Lien pour confirmer sa participation, renseigner transport et hébergement.</div>
+      <div class="tl-date">${a.ml2_sent?'Envoyé '+fmtDate(a.ml2_sent):'Pas encore envoyé'}</div>
+    </div>
+    <div class="tl-right">
+      ${a.ml2_done?'<span class="tl-status tls-done">Complété '+fmtDate(a.ml2_done)+'</span>':a.ml2_sent?'<span class="tl-status tls-wait">En attente</span><button class="relance-btn">Relancer</button>':'<button class="send-btn">Envoyer ML2</button>'}
+    </div>
+  </div>`;
+  // Manual email
+  html+=`<div class="tl-item">
+    <div class="tl-dot" style="background:var(--c4)"></div>
+    <div class="tl-content"><div class="tl-type" style="color:var(--c3)">Email manuel</div><div class="tl-desc">Envoyer un email libre à ${c.prenom}.</div></div>
+    <div class="tl-right"><button class="send-btn" onclick="event.stopPropagation();window.open('mailto:${c.email}')">Écrire</button></div>
+  </div>`;
+
+  html+=`</div></div>`;
+  return html;
+}
+
+function buildProfilTab(c,a,isLeader){
+  let html=`<div class="rp-panel" id="rp-profil">
+    <div class="fs"><div class="fs-t">Profil contact (lecture seule)</div><div class="fg">
+      <div class="f"><label>Prénom</label><input value="${c.prenom}" disabled></div>
+      <div class="f"><label>Nom</label><input value="${c.nom}" disabled></div>
+      <div class="f"><label>Tél</label><input value="${c.tel||''}" disabled></div>
+      <div class="f"><label>Email</label><input value="${c.email||''}" disabled></div>
+      <div class="f"><label>Ville</label><input value="${c.ville||''}" disabled></div>
+      <div class="f"><label>Contrat</label><input value="${c.contrat||''}" disabled></div>
+    </div></div>`;
+  if(!isLeader && c.tags.length){
+    html+=`<div class="fs"><div class="fs-t">Compétences</div>`;
+    c.tags.forEach(t=>{html+=`<div class="sk-row"><span class="sk-name">${t.name}</span><span class="sk-stars">${starsHtml(t.level)}</span></div>`});
+    html+=`</div>`;
+  }
+  html+=`<div style="text-align:center;padding:8px 0"><a href="contacts.html" style="color:var(--accent);text-decoration:none;font-size:var(--ct-xs)">Ouvrir dans Contacts →</a></div></div>`;
+  return html;
+}
+
+/* ═══ TAB SWITCHING ═══ */
+function rpSw(tabId,el){
+  document.querySelectorAll('.rp-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.rp-panel').forEach(p=>p.classList.remove('active'));
+  if(el) el.classList.add('active');
+  const p=document.getElementById('rp-'+tabId);
+  if(p) p.classList.add('active');
+}
+
+function backToCoord(){sid=null;document.getElementById('rCoord').style.display='';document.getElementById('rDetail').style.display='none';buildRoster()}
+function closePanel(){sid=null;document.getElementById('rCoord').style.display='';document.getElementById('rDetail').style.display='none';document.getElementById('right').classList.add('shut');buildRoster()}
+
+/* ═══ COORDINATION PANEL ═══ */
+function buildCoord(){
+  const el=document.getElementById('rCoord');
+  el.innerHTML=`<div class="rt-head"><div class="rt-title">Coordination staffing</div></div>`;
+  if(!activeEvent) return;
+  let html='<div class="coord">';
+
+  // Pôle progress
+  html+='<div class="coord-section"><div class="coord-label">Progression par pôle</div>';
+  Object.keys(POLES).forEach(team=>{
+    const tc=TC[team]||{bg:'rgba(255,255,255,.08)',c:'var(--c3)'};
+    const members=D.filter(c=>c.assignments.some(a=>a.event_id===activeEvent&&a.team===team));
+    const confirmed=members.filter(c=>{const a=c.assignments.find(x=>x.event_id===activeEvent&&x.team===team);return a&&a.status==='confirmed'});
+    const pct=members.length?Math.round(confirmed.length/members.length*100):0;
+    html+=`<div class="pole-row"><span class="pole-badge" style="background:${tc.bg};color:${tc.c}">${team.length>12?team.slice(0,10)+'…':team}</span><div class="pole-progress"><div class="pole-bar"><div class="pole-fill" style="width:${pct}%;background:${pct>=80?'var(--green)':pct>=50?'var(--amber)':'var(--red)'}"></div></div><div class="pole-stat"><span>${confirmed.length}/${members.length}</span><span>${POLES[team].leader_name.split(' ')[0]}</span></div></div></div>`;
+  });
+  html+='</div>';
+
+  // Alerts
+  html+='<div class="coord-section"><div class="coord-label">Alertes</div>';
+  const invited=D.filter(c=>{const a=c.assignments.find(x=>x.event_id===activeEvent);return a&&a.status==='invited'});
+  if(invited.length){
+    html+=`<div class="alert-item"><div class="alert-dot" style="background:var(--amber)"></div><div><div class="alert-text">${invited.length} invitation${invited.length>1?'s':''} en attente de confirmation</div><div class="alert-sub">${invited.map(c=>c.prenom+' '+c.nom).join(', ')}</div></div></div>`;
+  }
+  const noML=D.filter(c=>{const a=c.assignments.find(x=>x.event_id===activeEvent);return a&&!a.ml2_sent&&a.status!=='cancelled'});
+  if(noML.length){
+    html+=`<div class="alert-item"><div class="alert-dot" style="background:var(--red)"></div><div><div class="alert-text">${noML.length} magic link${noML.length>1?'s':''} non envoyé${noML.length>1?'s':''}</div><div class="alert-sub">${noML.map(c=>c.prenom).join(', ')}</div></div></div>`;
+  }
+  const pendingML=D.filter(c=>{const a=c.assignments.find(x=>x.event_id===activeEvent);return a&&a.ml2_sent&&!a.ml2_done});
+  if(pendingML.length){
+    html+=`<div class="alert-item"><div class="alert-dot" style="background:var(--purple)"></div><div><div class="alert-text">${pendingML.length} ML en attente de réponse</div><div class="alert-sub">${pendingML.map(c=>c.prenom).join(', ')}</div></div></div>`;
+  }
+  html+='</div></div>';
+  el.innerHTML+=html;
+}
+
+/* ═══ MODAL ═══ */
+function openModal(){document.getElementById('addModal').classList.add('show');document.getElementById('modalSearch').value='';filterModal();setTimeout(()=>document.getElementById('modalSearch').focus(),100)}
+function closeModal(){document.getElementById('addModal').classList.remove('show')}
+
+function filterModal(){
+  const q=document.getElementById('modalSearch').value.toLowerCase();
+  const list=document.getElementById('modalList');
+  const filtered=D.filter(c=>!q||`${c.prenom} ${c.nom} ${c.email} ${c.ville} ${c.tags.map(t=>t.name).join(' ')}`.toLowerCase().includes(q));
+  let html='<div class="modal-label">Suggestions</div>';
+  filtered.forEach(c=>{
+    const isAssigned=c.assignments.some(a=>a.event_id===activeEvent);
+    const avgSkill=c.tags.length?Math.round(c.tags.reduce((s,t)=>s+t.level,0)/c.tags.length):0;
+    html+=`<div class="mc${isAssigned?' taken':''}" onclick="${isAssigned?'':('assignContact('+c.contact_id+')')}">
+      <div class="av av-md" style="background:${grd(c.contact_id)}">${ini(c.prenom,c.nom)}</div>
+      <div class="mc-info"><div class="mc-name">${c.prenom} ${c.nom}</div><div class="mc-meta">${c.ville}${isAssigned?' · Déjà assigné':''}${c.contrat?' · '+c.contrat:''}</div>
+      <div class="mc-tags">${c.tags.slice(0,3).map(t=>'<span class="tag t-cost">'+t.name+'</span>').join('')}${c.local?'<span class="tag t-local">Local</span>':''}</div></div>
+      <div class="mc-right">${avgSkill?'<span class="stars">'+starsHtml(avgSkill)+'</span>':''}${c.rate_a?'<div class="mc-cost">'+c.rate_a+'/'+c.rate_b+'</div>':''}${!isAssigned?'<button class="mc-add">+ Ajouter</button>':''}</div>
+    </div>`;
+  });
+  list.innerHTML=html;
+}
+
+function assignContact(cid){
+  const c=D.find(x=>x.contact_id===cid);
+  if(!c||c.assignments.some(a=>a.event_id===activeEvent))return;
+  c.assignments.push({event_id:activeEvent,team:'—',role:'—',status:'invited',transport_aller:'',transport_aller_date:'',transport_retour:'',transport_retour_date:'',hebergement:'',chambre_pref:'',autonome_transport:false,autonome_hebergement:false,ml1_sent:null,ml1_done:null,ml2_sent:null,ml2_done:null});
+  closeModal();buildRoster();buildMetrics();buildCoord();openDetail(cid);
+}
+
+/* ═══ INIT ═══ */
+buildRoster();buildMetrics();buildCoord();
 </script>
 </body>
 </html>
